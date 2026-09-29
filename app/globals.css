@@ -58,62 +58,8 @@ button { font: inherit; }
 .team-link span { padding-left: 5px; color: var(--blue); font-size: 15px; }
 .team-link:hover, .player-link:hover { color: var(--blue); }
 
-.intro {
-  position: relative;
-  min-height: 285px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 42px 7.2% 48px;
-  background: var(--blue);
-  color: var(--white);
-  isolation: isolate;
-}
-
-.intro::before, .intro::after { position: absolute; z-index: -1; content: ""; pointer-events: none; }
-.intro::before {
-  width: 470px;
-  height: 470px;
-  top: -280px;
-  right: 16%;
-  border: 1px solid rgba(255,255,255,.13);
-  border-radius: 50%;
-  box-shadow: 0 0 0 34px rgba(255,255,255,.025), 0 0 0 88px rgba(255,255,255,.025), 0 0 0 144px rgba(255,255,255,.025);
-}
-.intro::after {
-  width: 290px;
-  height: 170%;
-  top: -30%;
-  right: 34%;
-  transform: rotate(32deg);
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.055), transparent);
-}
-
-.intro-copy { position: relative; z-index: 1; max-width: 520px; }
-.eyebrow { margin: 0 0 14px; color: rgba(255,255,255,.76); font-size: 10px; font-weight: 700; letter-spacing: .19em; }
-.live-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #ff9a70; box-shadow: 0 0 0 4px rgba(255,154,112,.17); vertical-align: 1px; }
-.intro h1 { margin: 0; font-family: var(--display); font-size: clamp(62px, 8vw, 94px); font-weight: 700; letter-spacing: -.025em; line-height: .78; text-transform: uppercase; }
-.intro h1 em { color: #ffb28d; font-style: normal; }
-.intro-description { max-width: 315px; margin: 20px 0 0; color: rgba(255,255,255,.8); font-size: 13px; line-height: 1.6; }
-
-.intro-stamp {
-  position: relative;
-  width: 168px;
-  height: 168px;
-  margin-right: 2%;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255,255,255,.4);
-  border-radius: 50%;
-  color: #fff;
-  transform: rotate(10deg);
-}
-.stamp-ring { position: absolute; inset: 10px; display: grid; place-items: start center; border: 1px dashed rgba(255,255,255,.44); border-radius: 50%; padding-top: 8px; font-size: 7px; font-weight: 700; letter-spacing: .16em; }
-.stamp-knight { position: absolute; top: 28px; font-size: 49px; line-height: 1; }
-.stamp-year { position: absolute; bottom: 28px; text-align: center; font-family: var(--display); font-size: 13px; font-weight: 700; letter-spacing: .14em; line-height: 1.08; }
-
 .board-section { margin-top: 27px; padding: 29px 5.3% 35px; background: var(--white); box-shadow: 0 18px 46px rgba(36, 50, 78, .075); }
+.eyebrow { margin: 0 0 14px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .19em; }
 .board-header { display: flex; align-items: end; justify-content: space-between; gap: 24px; }
 .eyebrow--dark { margin-bottom: 5px; color: var(--blue); }
 .board-header h2 { margin: 0; font-family: var(--display); font-size: clamp(33px, 4vw, 44px); font-weight: 700; letter-spacing: -.01em; line-height: 1; text-transform: uppercase; }
@@ -188,13 +134,6 @@ button { font: inherit; }
 
 @media (max-width: 680px) {
   .site-shell { width: min(100% - 28px, 560px); padding-top: 14px; }
-  .intro { min-height: 254px; padding: 34px 7%; }
-  .intro-stamp { width: 120px; height: 120px; margin: 18px 0 0; flex: 0 0 auto; }
-  .stamp-ring { inset: 7px; font-size: 5px; }
-  .stamp-knight { top: 21px; font-size: 36px; }
-  .stamp-year { bottom: 20px; font-size: 10px; }
-  .intro h1 { font-size: clamp(58px, 13vw, 78px); }
-  .intro-description { max-width: 230px; font-size: 11px; }
   .board-section { margin-top: 17px; padding: 23px 18px 28px; }
   .board-header { align-items: start; flex-direction: column; gap: 17px; }
   .board-header h2 { font-size: 38px; }
@@ -220,11 +159,6 @@ button { font: inherit; }
 }
 
 @media (max-width: 390px) {
-  .intro { padding-right: 5%; padding-left: 6%; }
-  .intro-stamp { width: 96px; height: 96px; }
-  .stamp-knight { top: 16px; font-size: 29px; }
-  .stamp-year { bottom: 15px; font-size: 8px; }
-  .stamp-ring { font-size: 4px; }
   .podium-card__label { font-size: 6px; }
   .podium-card__name { max-width: 95%; font-size: 10px; }
 }
