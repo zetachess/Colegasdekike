@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": null,
+  "updatedAt": "2026-09-29T23:01:39.606Z",
   "coverageFrom": "2020-05-23T15:00:00.000Z",
   "tournaments": [
     {
@@ -78846,5 +78846,18 @@
         }
       ]
     }
+  ],
+  "unavailableTournamentIds": [
+    "arena:DYOm01Oq",
+    "arena:Tx7Cp2yd",
+    "arena:Aqbyo9v1",
+    "arena:j9szqJnN",
+    "arena:xYbKaAva",
+    "arena:lvUlQJxF",
+    "arena:fLwdeMUq",
+    "arena:ygZmF8iZ",
+    "arena:0vJGOM4T",
+    "arena:7dhMQu0p",
+    "arena:uTk58M2K"
   ]
 }
