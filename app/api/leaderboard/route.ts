@@ -25,6 +25,7 @@ type Dataset = {
   team: string;
   updatedAt: string | null;
   coverageFrom: string | null;
+  unavailableTournamentIds?: string[];
   tournaments: Tournament[];
 };
 
@@ -32,6 +33,7 @@ const EMPTY_DATA: Dataset = {
   team: "colegas-de-kike",
   updatedAt: null,
   coverageFrom: null,
+  unavailableTournamentIds: [],
   tournaments: [],
 };
 
@@ -65,6 +67,7 @@ export async function GET(request: Request) {
       updatedAt: dataset.updatedAt,
       coverageFrom: dataset.coverageFrom,
       tournamentCount,
+      unavailableTournamentCount: dataset.unavailableTournamentIds?.length ?? 0,
       period,
       weekStart,
     });
