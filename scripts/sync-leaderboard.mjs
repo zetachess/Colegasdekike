@@ -3,6 +3,7 @@ import path from "node:path";
 import { upsertTournament } from "../lib/leaderboard.mjs";
 
 const teamId = process.env.LICHESS_TEAM_ID || "colegas-de-kike";
+const tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 10_000);
 const outputPath = process.env.LEADERBOARD_DATA_PATH || path.resolve("data/leaderboard.json");
 const emptyDataset = { team: teamId, updatedAt: null, coverageFrom: null, tournaments: [] };
 
@@ -101,7 +102,7 @@ async function writeDataset(dataset) {
 
 async function getTournamentList(type) {
   const endpoint = type === "arena" ? "arena" : "swiss";
-  const body = await fetchText(`https://lichess.org/api/team/${teamId}/${endpoint}?max=100`);
+  const body = await fetchText(`https://lichess.org/api/team/${teamId}/${endpoint}?max=${tournamentHistoryLimit}`);
   return parseRecords(body);
 }
 
