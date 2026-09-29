@@ -179,7 +179,9 @@ function parseTeamBattleHtml(html) {
 
 const dataset = await readDataset();
 dataset.team = teamId;
-dataset.tournaments = Array.isArray(dataset.tournaments) ? dataset.tournaments : [];
+dataset.tournaments = Array.isArray(dataset.tournaments)
+  ? dataset.tournaments.filter((tournament) => tournament.type === "arena")
+  : [];
 const knownIds = new Set(dataset.tournaments.map((tournament) => tournament.id));
 dataset.unavailableTournamentIds = Array.isArray(dataset.unavailableTournamentIds)
   ? dataset.unavailableTournamentIds
@@ -188,7 +190,7 @@ for (const id of dataset.unavailableTournamentIds) knownIds.add(id);
 let failed = false;
 let completedLists = 0;
 
-for (const type of ["arena", "swiss"]) {
+for (const type of ["arena"]) {
   let events;
   try {
     events = await getTournamentList(type);
@@ -242,7 +244,7 @@ for (const type of ["arena", "swiss"]) {
   }
 }
 
-if (completedLists === 2 && !failed) dataset.updatedAt = new Date().toISOString();
+if (completedLists === 1 && !failed) dataset.updatedAt = new Date().toISOString();
 dataset.coverageFrom = dataset.tournaments[0]?.startAt ?? null;
 await writeDataset(dataset);
 console.log(
