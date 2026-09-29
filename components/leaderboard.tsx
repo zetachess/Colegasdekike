@@ -14,6 +14,7 @@ type BoardData = {
   updatedAt: string | null;
   coverageFrom: string | null;
   tournamentCount: number;
+  unavailableTournamentCount: number;
 };
 
 type Period = "all" | "week";
@@ -23,6 +24,7 @@ const EMPTY_BOARD: BoardData = {
   updatedAt: null,
   coverageFrom: null,
   tournamentCount: 0,
+  unavailableTournamentCount: 0,
 };
 
 function formatPoints(points: number) {
@@ -196,6 +198,11 @@ export default function Leaderboard() {
         <div className="footer-meta">{period === "week" ? weekLabel : `Histórico desde ${formatDate(data.coverageFrom)}`}</div>
         <div className="footer-meta">{data.tournamentCount} {data.tournamentCount === 1 ? "torneo contado" : "torneos contados"}</div>
       </footer>
+      {data.unavailableTournamentCount > 0 && (
+        <p className="coverage-note">
+          Lichess ya no ofrece los resultados de {data.unavailableTournamentCount} torneos antiguos de Arena; no se incluyen en los puntos.
+        </p>
+      )}
       <div className="site-credit"><span>HECHO PARA JUGAR EN EQUIPO</span><span>DATOS PÚBLICOS DE LICHESS</span></div>
     </main>
   );
