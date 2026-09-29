@@ -5,7 +5,13 @@ import { upsertTournament } from "../lib/leaderboard.mjs";
 const teamId = process.env.LICHESS_TEAM_ID || "colegas-de-kike";
 const tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 1_000);
 const outputPath = process.env.LEADERBOARD_DATA_PATH || path.resolve("data/leaderboard.json");
-const emptyDataset = { team: teamId, updatedAt: null, coverageFrom: null, tournaments: [] };
+const emptyDataset = {
+  team: teamId,
+  updatedAt: null,
+  coverageFrom: null,
+  unavailableTournamentIds: [],
+  tournaments: [],
+};
 
 const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
@@ -175,6 +181,10 @@ const dataset = await readDataset();
 dataset.team = teamId;
 dataset.tournaments = Array.isArray(dataset.tournaments) ? dataset.tournaments : [];
 const knownIds = new Set(dataset.tournaments.map((tournament) => tournament.id));
+dataset.unavailableTournamentIds = Array.isArray(dataset.unavailableTournamentIds)
+  ? dataset.unavailableTournamentIds
+  : [];
+for (const id of dataset.unavailableTournamentIds) knownIds.add(id);
 let failed = false;
 let completedLists = 0;
 
@@ -217,8 +227,17 @@ for (const type of ["arena", "swiss"]) {
       await writeDataset(dataset);
       console.log(`Imported ${compositeId}: ${results.length} players.`);
     } catch (error) {
-      failed = true;
-      console.error(`Could not import ${compositeId}:`, error);
+      if (error instanceof Error && error.message.includes("Lichess returned 404")) {
+        // Some old team Arena listings outlive the team-specific standings page.
+        // Record them once so hourly syncs do not retry permanently missing data.
+        dataset.unavailableTournamentIds.push(compositeId);
+        knownIds.add(compositeId);
+        await writeDataset(dataset);
+        console.warn(`Historical results unavailable for ${compositeId}; recorded as missing.`);
+      } else {
+        failed = true;
+        console.error(`Could not import ${compositeId}:`, error);
+      }
     }
   }
 }
@@ -226,5 +245,7 @@ for (const type of ["arena", "swiss"]) {
 if (completedLists === 2 && !failed) dataset.updatedAt = new Date().toISOString();
 dataset.coverageFrom = dataset.tournaments[0]?.startAt ?? null;
 await writeDataset(dataset);
-console.log(`Saved ${dataset.tournaments.length} tournaments; sync status: ${failed ? "partial" : "complete"}.`);
+console.log(
+  `Saved ${dataset.tournaments.length} tournaments; ${dataset.unavailableTournamentIds.length} historical results unavailable; sync status: ${failed ? "partial" : "complete"}.`,
+);
 if (failed) process.exitCode = 1;
