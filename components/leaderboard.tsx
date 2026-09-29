@@ -127,19 +127,6 @@ export default function Leaderboard() {
         </a>
       </header>
 
-      <section className="intro">
-        <div className="intro-copy">
-          <p className="eyebrow"><span className="live-dot" /> BATALLAS POR EQUIPOS</p>
-          <h1>¿Quién<br /><em>manda?</em></h1>
-          <p className="intro-description">Los puntos que suma cada jugador en las batallas donde participa Colegas de Kike.</p>
-        </div>
-        <div className="intro-stamp" aria-hidden="true">
-          <span className="stamp-ring">CLASIFICACIÓN · LICHESS · COLEGAS DE KIKE · </span>
-          <span className="stamp-knight">♞</span>
-          <span className="stamp-year">PUNTOS<br />EN JUEGO</span>
-        </div>
-      </section>
-
       <section className="board-section" aria-labelledby="ranking-heading">
         <div className="board-header">
           <div>
