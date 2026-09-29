@@ -9,14 +9,14 @@ const emptyDataset = { team: teamId, updatedAt: null, coverageFrom: null, tourna
 
 const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 
-async function fetchText(url, accept = "application/x-ndjson, application/json") {
+async function fetchText(url, accept = "application/x-ndjson, application/json", timeoutMs = 45_000) {
   for (let attempt = 0; attempt < 4; attempt += 1) {
     const response = await fetch(url, {
       headers: {
         Accept: accept,
         "User-Agent": "colegas-de-kike-leaderboard/1.0",
       },
-      signal: AbortSignal.timeout(45_000),
+      signal: AbortSignal.timeout(timeoutMs),
     });
 
     if (response.status === 429) {
@@ -102,7 +102,11 @@ async function writeDataset(dataset) {
 
 async function getTournamentList(type) {
   const endpoint = type === "arena" ? "arena" : "swiss";
-  const body = await fetchText(`https://lichess.org/api/team/${teamId}/${endpoint}?max=${tournamentHistoryLimit}`);
+  const body = await fetchText(
+    `https://lichess.org/api/team/${teamId}/${endpoint}?max=${tournamentHistoryLimit}`,
+    "application/x-ndjson, application/json",
+    180_000,
+  );
   return parseRecords(body);
 }
 
