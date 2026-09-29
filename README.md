@@ -17,7 +17,7 @@ Web pública con el top 10 de puntos individuales sumados por los miembros de Co
 1. Crea un repositorio **público** en GitHub y sube el contenido de esta carpeta a su rama principal. Al subirlo, la importación inicial arranca sola; después se ejecuta cada hora.
 2. En GitHub, permite a Actions escribir en el repositorio: **Settings → Actions → General → Workflow permissions → Read and write permissions**. El workflow usa su token integrado, no un token personal.
 3. GitHub puede retrasar los trabajos programados cuando tiene mucha carga. También puedes lanzarlo en cualquier momento desde **Actions → Actualizar clasificación → Run workflow**.
-4. Importa el repositorio en Vercel. Activa la exposición de variables de sistema de Git en el proyecto para que la web detecte automáticamente el propietario y el nombre del repositorio.
+4. Importa el repositorio en Vercel. La web ya conoce el repositorio público donde se guardan los puntos; no hay que configurar variables de entorno para leerlos.
 
 La rama `leaderboard-data` debe ser pública para que Vercel pueda leer el JSON sin credenciales. La importación recoge el histórico de Batallas por equipos accesible por la API (hasta el límite configurado de 1.000); la web indica la fecha más antigua disponible. Los resultados futuros se agregan sin intervención manual.
 
