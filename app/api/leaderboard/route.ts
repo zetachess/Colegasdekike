@@ -1,12 +1,9 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { rankPlayers } from "../../../lib/leaderboard.mjs";
 
 export const runtime = "nodejs";
 
-const defaultDataRepoOwner = "zetachess";
-const defaultDataRepoName = "Colegasdekike";
+const leaderboardUrl = "https://raw.githubusercontent.com/zetachess/Colegasdekike/leaderboard-data/data/leaderboard.json";
 
 type TournamentResult = {
   playerId: string;
@@ -32,30 +29,14 @@ type Dataset = {
   tournaments: Tournament[];
 };
 
-const EMPTY_DATA: Dataset = {
-  team: "colegas-de-kike",
-  updatedAt: null,
-  coverageFrom: null,
-  unavailableTournamentIds: [],
-  tournaments: [],
-};
-
 async function loadDataset(): Promise<Dataset> {
-  // Vercel does not expose these system variables in every project by default.
-  // Keep the public repo as a fallback so the deployed page can always find its data.
-  const owner = process.env.VERCEL_GIT_REPO_OWNER || defaultDataRepoOwner;
-  const repo = process.env.VERCEL_GIT_REPO_SLUG || defaultDataRepoName;
-  const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/leaderboard-data/data/leaderboard.json`;
-  const response = await fetch(rawUrl, { next: { revalidate: 300 } });
-  if (response.ok) return (await response.json()) as Dataset;
-  if (response.status !== 404) throw new Error(`No se pudo leer el archivo de puntos (${response.status}).`);
-
-  try {
-    const localFile = path.join(process.cwd(), "data", "leaderboard.json");
-    return JSON.parse(await readFile(localFile, "utf8")) as Dataset;
-  } catch {
-    return EMPTY_DATA;
+  const response = await fetch(leaderboardUrl, { cache: "no-store" });
+  if (!response.ok) throw new Error(`No se pudo leer el archivo de puntos (${response.status}).`);
+  const dataset = (await response.json()) as Dataset;
+  if (dataset.team !== "colegas-de-kike" || !Array.isArray(dataset.tournaments)) {
+    throw new Error("El archivo público de puntos no tiene el formato esperado.");
   }
+  return dataset;
 }
 
 export async function GET(request: Request) {
@@ -73,7 +54,7 @@ export async function GET(request: Request) {
       period,
       weekStart,
     });
-    response.headers.set("Cache-Control", "public, s-maxage=60, stale-while-revalidate=300");
+    response.headers.set("Cache-Control", "no-store");
     return response;
   } catch (error) {
     console.error("Leaderboard read failed", error);
