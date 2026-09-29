@@ -1,0 +1,71 @@
+name: Actualizar clasificación
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: leaderboard-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cargar datos guardados
+        shell: bash
+        run: |
+          if git ls-remote --exit-code --heads origin leaderboard-data >/dev/null 2>&1; then
+            git fetch origin leaderboard-data
+            git show FETCH_HEAD:data/leaderboard.json > data/leaderboard.json
+          fi
+
+      - name: Recoger resultados finalizados de Lichess
+        id: collect
+        continue-on-error: true
+        run: node scripts/sync-leaderboard.mjs
+
+      - name: Guardar datos en la rama pública de datos
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/leaderboard-snapshot"
+          cp data/leaderboard.json "$RUNNER_TEMP/leaderboard-snapshot/leaderboard.json"
+          cp vercel.json "$RUNNER_TEMP/leaderboard-snapshot/vercel.json"
+          if git ls-remote --exit-code --heads origin leaderboard-data >/dev/null 2>&1; then
+            git fetch origin leaderboard-data
+            git checkout --force -B leaderboard-data FETCH_HEAD
+          else
+            git checkout -b leaderboard-data
+          fi
+          mkdir -p data
+          cp "$RUNNER_TEMP/leaderboard-snapshot/leaderboard.json" data/leaderboard.json
+          cp "$RUNNER_TEMP/leaderboard-snapshot/vercel.json" vercel.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/leaderboard.json vercel.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Lichess leaderboard data"
+            git push origin HEAD:leaderboard-data
+          fi
+
+      - name: Marcar sincronización incompleta como fallo
+        if: steps.collect.outcome == 'failure'
+        run: exit 1
