@@ -42,17 +42,24 @@ async function loadDataset(): Promise<Dataset> {
 export async function GET(request: Request) {
   try {
     const dataset = await loadDataset();
-    const period = new URL(request.url).searchParams.get("period") === "week" ? "week" : "all";
-    const { entries, weekStart, tournamentCount } = rankPlayers(dataset, period, new Date());
+    const now = new Date();
+    const allTime = rankPlayers(dataset, "all", now);
+    const thisWeek = rankPlayers(dataset, "week", now);
+    const results = dataset.tournaments
+      .filter((tournament) => tournament.type === "arena")
+      .flatMap((tournament) => tournament.results);
 
     const response = NextResponse.json({
-      entries,
+      allTime: allTime.entries,
+      thisWeek: thisWeek.entries,
       updatedAt: dataset.updatedAt,
       coverageFrom: dataset.coverageFrom,
-      tournamentCount,
+      tournamentCount: allTime.tournamentCount,
+      weekTournamentCount: thisWeek.tournamentCount,
+      uniquePlayers: new Set(results.map((result) => result.playerId)).size,
+      totalPoints: results.reduce((sum, result) => sum + result.points, 0),
       unavailableTournamentCount: dataset.unavailableTournamentIds?.length ?? 0,
-      period,
-      weekStart,
+      weekStart: thisWeek.weekStart,
     });
     response.headers.set("Cache-Control", "no-store");
     return response;
