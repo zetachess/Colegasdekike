@@ -1,6 +1,3311 @@
 {
   "team": "colegas-de-kike",
   "updatedAt": null,
-  "coverageFrom": null,
-  "tournaments": []
+  "coverageFrom": "2020-05-23T15:00:00.000Z",
+  "tournaments": [
+    {
+      "id": "swiss:ZUW2Naba",
+      "lichessId": "ZUW2Naba",
+      "type": "swiss",
+      "name": "Colegas de Kike",
+      "startAt": "2020-05-23T15:00:00.000Z",
+      "url": "https://lichess.org/swiss/ZUW2Naba",
+      "results": [
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 5.5,
+          "rank": 1
+        },
+        {
+          "playerId": "pelegbn",
+          "username": "Pelegbn",
+          "points": 5,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "koira2006",
+          "username": "koira2006",
+          "points": 3.5,
+          "rank": 4
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "chopigb",
+          "username": "chopigb",
+          "points": 3,
+          "rank": 6
+        },
+        {
+          "playerId": "marquitos1",
+          "username": "marquitos1",
+          "points": 3,
+          "rank": 7
+        },
+        {
+          "playerId": "cholosimeone",
+          "username": "cholosimeone",
+          "points": 3,
+          "rank": 8
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 3,
+          "rank": 9
+        },
+        {
+          "playerId": "espilva",
+          "username": "espilva",
+          "points": 2.5,
+          "rank": 10
+        },
+        {
+          "playerId": "krapulinno",
+          "username": "Krapulinno",
+          "points": 2.5,
+          "rank": 11
+        },
+        {
+          "playerId": "aburovtsev",
+          "username": "Aburovtsev",
+          "points": 2,
+          "rank": 12
+        },
+        {
+          "playerId": "migueldelibex35",
+          "username": "migueldelibex35",
+          "points": 2,
+          "rank": 13
+        },
+        {
+          "playerId": "guozi",
+          "username": "Guozi",
+          "points": 1.5,
+          "rank": 14
+        },
+        {
+          "playerId": "cgruano",
+          "username": "cgruano",
+          "points": 1,
+          "rank": 15
+        },
+        {
+          "playerId": "zyxw430",
+          "username": "zyxw430",
+          "points": 1,
+          "rank": 16
+        },
+        {
+          "playerId": "kirillvasilev",
+          "username": "KirillVasilev",
+          "points": 0,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "id": "swiss:zmY81TU5",
+      "lichessId": "zmY81TU5",
+      "type": "swiss",
+      "name": "Colegas del Suizo",
+      "startAt": "2020-06-02T18:05:00.000Z",
+      "url": "https://lichess.org/swiss/zmY81TU5",
+      "results": [
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "jrv7",
+          "username": "JRV7",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "dmytro2018",
+          "username": "dmytro2018",
+          "points": 3.5,
+          "rank": 4
+        },
+        {
+          "playerId": "marcosguti",
+          "username": "marcosguti",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "gueguense",
+          "username": "Gueguense",
+          "points": 2.5,
+          "rank": 6
+        },
+        {
+          "playerId": "juancarlain",
+          "username": "juancarlain",
+          "points": 1,
+          "rank": 7
+        },
+        {
+          "playerId": "joaquinquenta",
+          "username": "joaquinquenta",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "josdda",
+          "username": "Josdda",
+          "points": 0.5,
+          "rank": 9
+        },
+        {
+          "playerId": "calixtos2007",
+          "username": "calixtos2007",
+          "points": 0.5,
+          "rank": 10
+        },
+        {
+          "playerId": "remolacho2",
+          "username": "Remolacho2",
+          "points": 0.5,
+          "rank": 11
+        },
+        {
+          "playerId": "ismaelgh16",
+          "username": "IsmaelGH16",
+          "points": 0,
+          "rank": 12
+        },
+        {
+          "playerId": "hesse06",
+          "username": "Hesse06",
+          "points": 0,
+          "rank": 13
+        }
+      ]
+    },
+    {
+      "id": "swiss:JKtxDlla",
+      "lichessId": "JKtxDlla",
+      "type": "swiss",
+      "name": "Colegas de espilva",
+      "startAt": "2020-06-07T09:15:00.000Z",
+      "url": "https://lichess.org/swiss/JKtxDlla",
+      "results": [
+        {
+          "playerId": "edaldiar17",
+          "username": "Edaldiar17",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "iriartekike",
+          "username": "Iriartekike",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "marcosguti",
+          "username": "marcosguti",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "babel21",
+          "username": "babel21",
+          "points": 0.5,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "swiss:oBbNGiCa",
+      "lichessId": "oBbNGiCa",
+      "type": "swiss",
+      "name": "II Colegas del Suizo",
+      "startAt": "2020-06-09T18:05:00.000Z",
+      "url": "https://lichess.org/swiss/oBbNGiCa",
+      "results": [
+        {
+          "playerId": "soydeuriburu",
+          "username": "SoydeUriburu",
+          "points": 6,
+          "rank": 1
+        },
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 5.5,
+          "rank": 2
+        },
+        {
+          "playerId": "matedelacoz",
+          "username": "matedelacoz",
+          "points": 5.5,
+          "rank": 3
+        },
+        {
+          "playerId": "pampafede",
+          "username": "pampafede",
+          "points": 4.5,
+          "rank": 4
+        },
+        {
+          "playerId": "s3rgi0",
+          "username": "s3rgi0",
+          "points": 4.5,
+          "rank": 5
+        },
+        {
+          "playerId": "migel647578",
+          "username": "migel647578",
+          "points": 4.5,
+          "rank": 6
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 4.5,
+          "rank": 7
+        },
+        {
+          "playerId": "luatatroll",
+          "username": "Luatatroll",
+          "points": 4,
+          "rank": 8
+        },
+        {
+          "playerId": "ak476",
+          "username": "AK476",
+          "points": 4,
+          "rank": 9
+        },
+        {
+          "playerId": "jrv7",
+          "username": "JRV7",
+          "points": 3.5,
+          "rank": 10
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 3.5,
+          "rank": 11
+        },
+        {
+          "playerId": "haanz",
+          "username": "haAnz",
+          "points": 3.5,
+          "rank": 12
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 3,
+          "rank": 13
+        },
+        {
+          "playerId": "pingopampa",
+          "username": "pingopampa",
+          "points": 3,
+          "rank": 14
+        },
+        {
+          "playerId": "marcosguti",
+          "username": "marcosguti",
+          "points": 3,
+          "rank": 15
+        },
+        {
+          "playerId": "cholosimeone",
+          "username": "cholosimeone",
+          "points": 2.5,
+          "rank": 16
+        },
+        {
+          "playerId": "guesitos",
+          "username": "guesitos",
+          "points": 2.5,
+          "rank": 17
+        },
+        {
+          "playerId": "eloyof",
+          "username": "eloyof",
+          "points": 2,
+          "rank": 18
+        },
+        {
+          "playerId": "keipo",
+          "username": "Keipo",
+          "points": 2,
+          "rank": 19
+        },
+        {
+          "playerId": "elchicomedallas",
+          "username": "elchicomedallas",
+          "points": 2,
+          "rank": 20
+        },
+        {
+          "playerId": "arkodiptodutta",
+          "username": "ArkodiptoDutta",
+          "points": 1,
+          "rank": 21
+        },
+        {
+          "playerId": "thuirbeast",
+          "username": "thuirbeast",
+          "points": 1,
+          "rank": 22
+        },
+        {
+          "playerId": "tony960",
+          "username": "Tony960",
+          "points": 1,
+          "rank": 23
+        },
+        {
+          "playerId": "kallis",
+          "username": "Kallis",
+          "points": 0.5,
+          "rank": 24
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 0.5,
+          "rank": 25
+        },
+        {
+          "playerId": "dekers",
+          "username": "DekerS",
+          "points": 0.5,
+          "rank": 26
+        },
+        {
+          "playerId": "victorcourcelle2-0",
+          "username": "VictorCourcelle2-0",
+          "points": 0,
+          "rank": 27
+        },
+        {
+          "playerId": "hesse06",
+          "username": "Hesse06",
+          "points": 0,
+          "rank": 28
+        },
+        {
+          "playerId": "joaquinquenta",
+          "username": "joaquinquenta",
+          "points": 0,
+          "rank": 29
+        },
+        {
+          "playerId": "profediegoalejandro",
+          "username": "profediegoalejandro",
+          "points": 0,
+          "rank": 30
+        }
+      ]
+    },
+    {
+      "id": "swiss:id5TEekx",
+      "lichessId": "id5TEekx",
+      "type": "swiss",
+      "name": "Colegas de Espilva",
+      "startAt": "2020-06-13T08:30:00.000Z",
+      "url": "https://lichess.org/swiss/id5TEekx",
+      "results": [
+        {
+          "playerId": "espilva",
+          "username": "espilva",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "iriartekike",
+          "username": "Iriartekike",
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "playerId": "ismaelgh16",
+          "username": "IsmaelGH16",
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "playerId": "albertogl",
+          "username": "AlbertoGL",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "fjfernandezgar",
+          "username": "fjfernandezgar",
+          "points": 2.5,
+          "rank": 5
+        },
+        {
+          "playerId": "virginialm",
+          "username": "VirginiaLM",
+          "points": 2,
+          "rank": 6
+        },
+        {
+          "playerId": "fondon",
+          "username": "Fondon",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 1.5,
+          "rank": 8
+        },
+        {
+          "playerId": "virginiagl",
+          "username": "VirginiaGL",
+          "points": 1,
+          "rank": 9
+        },
+        {
+          "playerId": "markelcorbacho",
+          "username": "MarkelCorbacho",
+          "points": 1,
+          "rank": 10
+        },
+        {
+          "playerId": "valiushka111",
+          "username": "Valiushka111",
+          "points": 0,
+          "rank": 11
+        },
+        {
+          "playerId": "amq_08",
+          "username": "amq_08",
+          "points": 0,
+          "rank": 12
+        }
+      ]
+    },
+    {
+      "id": "swiss:lViVxC7e",
+      "lichessId": "lViVxC7e",
+      "type": "swiss",
+      "name": "Colegas in the night",
+      "startAt": "2020-06-16T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/lViVxC7e",
+      "results": [
+        {
+          "playerId": "superbohemio",
+          "username": "superbohemio",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "ailu99",
+          "username": "Ailu99",
+          "points": 2,
+          "rank": 3
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 1.5,
+          "rank": 4
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 5
+        },
+        {
+          "playerId": "pedromito2704",
+          "username": "Pedromito2704",
+          "points": 1,
+          "rank": 6
+        },
+        {
+          "playerId": "jrv7",
+          "username": "JRV7",
+          "points": 1,
+          "rank": 7
+        },
+        {
+          "playerId": "eloyof",
+          "username": "eloyof",
+          "points": 0,
+          "rank": 8
+        },
+        {
+          "playerId": "benjadruetto",
+          "username": "benjadruetto",
+          "points": 0,
+          "rank": 9
+        },
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 0,
+          "rank": 10
+        }
+      ]
+    },
+    {
+      "id": "swiss:Xmt81d7b",
+      "lichessId": "Xmt81d7b",
+      "type": "swiss",
+      "name": "Colegas in the morning",
+      "startAt": "2020-06-17T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/Xmt81d7b",
+      "results": [
+        {
+          "playerId": "perezsaurio",
+          "username": "Perezsaurio",
+          "points": 6.5,
+          "rank": 1
+        },
+        {
+          "playerId": "ril-1997",
+          "username": "ril-1997",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 4.5,
+          "rank": 3
+        },
+        {
+          "playerId": "trenecito112",
+          "username": "trenecito112",
+          "points": 4.5,
+          "rank": 4
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "superbohemio",
+          "username": "superbohemio",
+          "points": 2.5,
+          "rank": 6
+        },
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "ismaelgh16",
+          "username": "IsmaelGH16",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "valiushka111",
+          "username": "Valiushka111",
+          "points": 1,
+          "rank": 9
+        },
+        {
+          "playerId": "migueldelibex35",
+          "username": "migueldelibex35",
+          "points": 1,
+          "rank": 10
+        }
+      ]
+    },
+    {
+      "id": "swiss:Z9kCHD5z",
+      "lichessId": "Z9kCHD5z",
+      "type": "swiss",
+      "name": "Colegas in the morning",
+      "startAt": "2020-06-18T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/Z9kCHD5z",
+      "results": [
+        {
+          "playerId": "trenecito112",
+          "username": "trenecito112",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "srtancredi",
+          "username": "srtancredi",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "valiushka111",
+          "username": "Valiushka111",
+          "points": 0,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "swiss:dA3JGUPm",
+      "lichessId": "dA3JGUPm",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2020-08-12T19:00:00.000Z",
+      "url": "https://lichess.org/swiss/dA3JGUPm",
+      "results": [
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "playerId": "ouuumama",
+          "username": "Ouuumama",
+          "points": 5.5,
+          "rank": 2
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 5,
+          "rank": 3
+        },
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 5,
+          "rank": 4
+        },
+        {
+          "playerId": "koesplus69",
+          "username": "Koesplus69",
+          "points": 4.5,
+          "rank": 5
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 4.5,
+          "rank": 6
+        },
+        {
+          "playerId": "tinotin",
+          "username": "TinoTin",
+          "points": 4,
+          "rank": 7
+        },
+        {
+          "playerId": "thegoldenarcher",
+          "username": "TheGoldenArcher",
+          "points": 4,
+          "rank": 8
+        },
+        {
+          "playerId": "cidrudriq3",
+          "username": "CidRudriq3",
+          "points": 3.5,
+          "rank": 9
+        },
+        {
+          "playerId": "jmag",
+          "username": "jmag",
+          "points": 3,
+          "rank": 10
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "chapalaudi",
+          "username": "chapalaudi",
+          "points": 1,
+          "rank": 12
+        },
+        {
+          "playerId": "redoyamo",
+          "username": "redoyamo",
+          "points": 1,
+          "rank": 13
+        },
+        {
+          "playerId": "garrimaqui",
+          "username": "garrimaqui",
+          "points": 1,
+          "rank": 14
+        },
+        {
+          "playerId": "bernaguaro",
+          "username": "bernaguaro",
+          "points": 0.5,
+          "rank": 15
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 0.5,
+          "rank": 16
+        },
+        {
+          "playerId": "vedanths",
+          "username": "VedanthS",
+          "points": 0.5,
+          "rank": 17
+        },
+        {
+          "playerId": "falcon6",
+          "username": "FALCON6",
+          "points": 0,
+          "rank": 18
+        },
+        {
+          "playerId": "ganesh2209",
+          "username": "Ganesh2209",
+          "points": 0,
+          "rank": 19
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 20
+        }
+      ]
+    },
+    {
+      "id": "swiss:cds8DVLp",
+      "lichessId": "cds8DVLp",
+      "type": "swiss",
+      "name": "Colegas in the morning",
+      "startAt": "2020-08-16T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/cds8DVLp",
+      "results": [
+        {
+          "playerId": "angeljavier",
+          "username": "angeljavier",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "asalvajado",
+          "username": "Asalvajado",
+          "points": 1.5,
+          "rank": 2
+        },
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "guilleminho2000",
+          "username": "Guilleminho2000",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "jekapi",
+          "username": "jekapi",
+          "points": 0.5,
+          "rank": 5
+        },
+        {
+          "playerId": "josdda",
+          "username": "Josdda",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "falcon6",
+          "username": "FALCON6",
+          "points": 0,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "swiss:Wina5wk7",
+      "lichessId": "Wina5wk7",
+      "type": "swiss",
+      "name": "Colegas de Federer - Morning",
+      "startAt": "2020-09-05T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/Wina5wk7",
+      "results": [
+        {
+          "playerId": "alex3333333",
+          "username": "alex3333333",
+          "points": 6,
+          "rank": 1
+        },
+        {
+          "playerId": "billylaimbeer",
+          "username": "BillyLaimbeer",
+          "points": 5.5,
+          "rank": 2
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "villar_0715",
+          "username": "VILLAR_0715",
+          "points": 4,
+          "rank": 4
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 4,
+          "rank": 5
+        },
+        {
+          "playerId": "mamasitaisback",
+          "username": "Mamasitaisback",
+          "points": 3.5,
+          "rank": 6
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "ahajihoseini",
+          "username": "ahajihoseini",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "kwisdoom",
+          "username": "kwisdoom",
+          "points": 0.5,
+          "rank": 9
+        },
+        {
+          "playerId": "jgomezgarcia",
+          "username": "Jgomezgarcia",
+          "points": 0.5,
+          "rank": 10
+        },
+        {
+          "playerId": "gaganpgm2",
+          "username": "Gaganpgm2",
+          "points": 0.5,
+          "rank": 11
+        },
+        {
+          "playerId": "karthik6161131110",
+          "username": "Karthik6161131110",
+          "points": 0,
+          "rank": 12
+        }
+      ]
+    },
+    {
+      "id": "swiss:d1cb4iKH",
+      "lichessId": "d1cb4iKH",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2020-09-06T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/d1cb4iKH",
+      "results": [
+        {
+          "playerId": "superbohemio",
+          "username": "superbohemio",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "manojkumarroy123",
+          "username": "ManojKumarRoy123",
+          "points": 2.5,
+          "rank": 3
+        },
+        {
+          "playerId": "ismaelgh16",
+          "username": "IsmaelGH16",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "jakevorobei",
+          "username": "JakeVorobei",
+          "points": 1.5,
+          "rank": 5
+        },
+        {
+          "playerId": "vaggosm",
+          "username": "VAGGOSM",
+          "points": 1,
+          "rank": 6
+        },
+        {
+          "playerId": "txurdi",
+          "username": "txurdi",
+          "points": 0,
+          "rank": 7
+        },
+        {
+          "playerId": "eloyof",
+          "username": "eloyof",
+          "points": 0,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "swiss:fUrHpiAc",
+      "lichessId": "fUrHpiAc",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2020-09-15T18:00:00.000Z",
+      "url": "https://lichess.org/swiss/fUrHpiAc",
+      "results": [
+        {
+          "playerId": "perichete",
+          "username": "Perichete",
+          "points": 4.5,
+          "rank": 1
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "danieru99",
+          "username": "Danieru99",
+          "points": 4.5,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "orce78",
+          "username": "Orce78",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "jesucristo_and_satan",
+          "username": "Jesucristo_and_satan",
+          "points": 1.5,
+          "rank": 6
+        },
+        {
+          "playerId": "torralbsen",
+          "username": "torralbsen",
+          "points": 1.5,
+          "rank": 7
+        },
+        {
+          "playerId": "paulmar",
+          "username": "PAULMAR",
+          "points": 1.5,
+          "rank": 8
+        },
+        {
+          "playerId": "faustercio",
+          "username": "Faustercio",
+          "points": 1.5,
+          "rank": 9
+        },
+        {
+          "playerId": "falcon6",
+          "username": "FALCON6",
+          "points": 1,
+          "rank": 10
+        },
+        {
+          "playerId": "purveshrane_pr",
+          "username": "PURVESHRANE_pr",
+          "points": 1,
+          "rank": 11
+        },
+        {
+          "playerId": "aimarja",
+          "username": "Aimarja",
+          "points": 0.5,
+          "rank": 12
+        },
+        {
+          "playerId": "bernaguaro",
+          "username": "bernaguaro",
+          "points": 0.5,
+          "rank": 13
+        },
+        {
+          "playerId": "bibliotecamunicipal",
+          "username": "bibliotecamunicipal",
+          "points": 0.5,
+          "rank": 14
+        },
+        {
+          "playerId": "carahuevo",
+          "username": "carahuevo",
+          "points": 0.5,
+          "rank": 15
+        },
+        {
+          "playerId": "fritzbeukah",
+          "username": "FritzBeukah",
+          "points": 0.5,
+          "rank": 16
+        },
+        {
+          "playerId": "ghukas2010",
+          "username": "Ghukas2010",
+          "points": 0,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "id": "swiss:ABIOPwFZ",
+      "lichessId": "ABIOPwFZ",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2020-10-08T14:00:00.000Z",
+      "url": "https://lichess.org/swiss/ABIOPwFZ",
+      "results": [
+        {
+          "playerId": "migueldelibex35",
+          "username": "migueldelibex35",
+          "points": 6,
+          "rank": 1
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 5.5,
+          "rank": 2
+        },
+        {
+          "playerId": "torralbsen",
+          "username": "torralbsen",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "hectormg",
+          "username": "HectorMG",
+          "points": 4,
+          "rank": 4
+        },
+        {
+          "playerId": "leobenitez",
+          "username": "leobenitez",
+          "points": 4,
+          "rank": 5
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 3,
+          "rank": 6
+        },
+        {
+          "playerId": "orce78",
+          "username": "Orce78",
+          "points": 3,
+          "rank": 7
+        },
+        {
+          "playerId": "purveshrane_pr",
+          "username": "PURVESHRANE_pr",
+          "points": 2.5,
+          "rank": 8
+        },
+        {
+          "playerId": "ch_agustinrc2007",
+          "username": "Ch_Agustinrc2007",
+          "points": 1,
+          "rank": 9
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 1,
+          "rank": 10
+        },
+        {
+          "playerId": "josdda",
+          "username": "Josdda",
+          "points": 1,
+          "rank": 11
+        },
+        {
+          "playerId": "mateo_040",
+          "username": "MATEO_040",
+          "points": 1,
+          "rank": 12
+        },
+        {
+          "playerId": "maestrobolillo",
+          "username": "maestrobolillo",
+          "points": 1,
+          "rank": 13
+        },
+        {
+          "playerId": "ronnyhernandez89",
+          "username": "Ronnyhernandez89",
+          "points": 1,
+          "rank": 14
+        },
+        {
+          "playerId": "chilote",
+          "username": "chilote",
+          "points": 0.5,
+          "rank": 15
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0.5,
+          "rank": 16
+        },
+        {
+          "playerId": "portimaga",
+          "username": "portimaga",
+          "points": 0,
+          "rank": 17
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 0,
+          "rank": 18
+        }
+      ]
+    },
+    {
+      "id": "swiss:EP6OudLV",
+      "lichessId": "EP6OudLV",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2020-10-27T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/EP6OudLV",
+      "results": [
+        {
+          "playerId": "jeffforever",
+          "username": "jeffforever",
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 6,
+          "rank": 2
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "red_wn",
+          "username": "Red_wn",
+          "points": 4,
+          "rank": 4
+        },
+        {
+          "playerId": "bacinico",
+          "username": "bacinico",
+          "points": 4,
+          "rank": 5
+        },
+        {
+          "playerId": "forsacmr11",
+          "username": "forsacmr11",
+          "points": 3,
+          "rank": 6
+        },
+        {
+          "playerId": "aliaskerzade",
+          "username": "AliAskerzade",
+          "points": 3,
+          "rank": 7
+        },
+        {
+          "playerId": "juliuspleschke",
+          "username": "JuliusPleschke",
+          "points": 3,
+          "rank": 8
+        },
+        {
+          "playerId": "amin_blues",
+          "username": "AMIN_BLUES",
+          "points": 2,
+          "rank": 9
+        },
+        {
+          "playerId": "ganesh2209",
+          "username": "Ganesh2209",
+          "points": 2,
+          "rank": 10
+        },
+        {
+          "playerId": "jh0nny",
+          "username": "Jh0nny",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 2,
+          "rank": 12
+        },
+        {
+          "playerId": "josdda",
+          "username": "Josdda",
+          "points": 0,
+          "rank": 13
+        },
+        {
+          "playerId": "gattuso87",
+          "username": "gattuso87",
+          "points": 0,
+          "rank": 14
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 15
+        },
+        {
+          "playerId": "josephnarkis",
+          "username": "josephnarkis",
+          "points": 0,
+          "rank": 16
+        },
+        {
+          "playerId": "miguelgalizza21",
+          "username": "miguelgalizza21",
+          "points": 0,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "id": "swiss:PgDDd6UQ",
+      "lichessId": "PgDDd6UQ",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2020-10-28T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/PgDDd6UQ",
+      "results": [
+        {
+          "playerId": "karpovmex",
+          "username": "Karpovmex",
+          "points": 3.5,
+          "rank": 1
+        },
+        {
+          "playerId": "rodri888",
+          "username": "Rodri888",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "gattuso87",
+          "username": "gattuso87",
+          "points": 2,
+          "rank": 3
+        },
+        {
+          "playerId": "josephnarkis",
+          "username": "josephnarkis",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "alexandr1_esin",
+          "username": "Alexandr1_Esin",
+          "points": 1.5,
+          "rank": 5
+        },
+        {
+          "playerId": "kaligulas",
+          "username": "Kaligulas",
+          "points": 1.5,
+          "rank": 6
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 1,
+          "rank": 7
+        },
+        {
+          "playerId": "jugandoajedrez1234",
+          "username": "jugandoajedrez1234",
+          "points": 0.5,
+          "rank": 8
+        },
+        {
+          "playerId": "maesemax",
+          "username": "MaeseMax",
+          "points": 0.5,
+          "rank": 9
+        },
+        {
+          "playerId": "faustercio",
+          "username": "Faustercio",
+          "points": 0.5,
+          "rank": 10
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 11
+        }
+      ]
+    },
+    {
+      "id": "swiss:JyWChuTq",
+      "lichessId": "JyWChuTq",
+      "type": "swiss",
+      "name": "Colegas en la siesta de Roger",
+      "startAt": "2020-11-03T14:30:00.000Z",
+      "url": "https://lichess.org/swiss/JyWChuTq",
+      "results": [
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 4.5,
+          "rank": 1
+        },
+        {
+          "playerId": "radiaktivo_biohazard",
+          "username": "Radiaktivo_Biohazard",
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 3.5,
+          "rank": 3
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "me3000",
+          "username": "me3000",
+          "points": 2.5,
+          "rank": 5
+        },
+        {
+          "playerId": "josephnarkis",
+          "username": "josephnarkis",
+          "points": 1,
+          "rank": 6
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 0.5,
+          "rank": 7
+        },
+        {
+          "playerId": "thechessrockstar9999",
+          "username": "TheChessRockstar9999",
+          "points": 0.5,
+          "rank": 8
+        },
+        {
+          "playerId": "varicelada",
+          "username": "Varicelada",
+          "points": 0.5,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "swiss:atBhIUil",
+      "lichessId": "atBhIUil",
+      "type": "swiss",
+      "name": "Daily bullet - Swiss",
+      "startAt": "2020-11-04T09:00:00.000Z",
+      "url": "https://lichess.org/swiss/atBhIUil",
+      "results": [
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "me3000",
+          "username": "me3000",
+          "points": 1,
+          "rank": 2
+        },
+        {
+          "playerId": "sanjay_subbu2010",
+          "username": "Sanjay_Subbu2010",
+          "points": 0.5,
+          "rank": 3
+        },
+        {
+          "playerId": "migueldelibex35",
+          "username": "migueldelibex35",
+          "points": 0,
+          "rank": 4
+        },
+        {
+          "playerId": "maninbuch",
+          "username": "ManinBuch",
+          "points": 0,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "swiss:8Ldy4ipU",
+      "lichessId": "8Ldy4ipU",
+      "type": "swiss",
+      "name": "Daily SuperBlitz - Swiss",
+      "startAt": "2020-11-04T11:00:00.000Z",
+      "url": "https://lichess.org/swiss/8Ldy4ipU",
+      "results": [
+        {
+          "playerId": "polonio222",
+          "username": "polonio222",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "aragonian78",
+          "username": "Aragonian78",
+          "points": 1,
+          "rank": 2
+        },
+        {
+          "playerId": "pasan0",
+          "username": "pasan0",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "laukikkk",
+          "username": "laukikkk",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "swiss-system",
+          "username": "SWISS-SYSTEM",
+          "points": 0,
+          "rank": 5
+        },
+        {
+          "playerId": "rish20",
+          "username": "rish20",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "swiss:2iBKA4vw",
+      "lichessId": "2iBKA4vw",
+      "type": "swiss",
+      "name": "Daily Swiss 3+0",
+      "startAt": "2020-11-05T12:00:00.000Z",
+      "url": "https://lichess.org/swiss/2iBKA4vw",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 5.5,
+          "rank": 1
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "benoyjohnk",
+          "username": "Benoyjohnk",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "sid_chess_king",
+          "username": "sid_chess_king",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "gerardts",
+          "username": "gerardts",
+          "points": 0.5,
+          "rank": 5
+        },
+        {
+          "playerId": "sanjay_subbu2010",
+          "username": "Sanjay_Subbu2010",
+          "points": 0.5,
+          "rank": 6
+        },
+        {
+          "playerId": "mazurovtimur",
+          "username": "mazurovtimur",
+          "points": 0,
+          "rank": 7
+        },
+        {
+          "playerId": "swiss-system",
+          "username": "SWISS-SYSTEM",
+          "points": 0,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "swiss:RHI8VEPA",
+      "lichessId": "RHI8VEPA",
+      "type": "swiss",
+      "name": "Daily Swiss 3+0",
+      "startAt": "2020-11-06T20:00:00.000Z",
+      "url": "https://lichess.org/swiss/RHI8VEPA",
+      "results": [
+        {
+          "playerId": "sunnyandsammy2020",
+          "username": "sunnyandsammy2020",
+          "points": 4,
+          "rank": 1
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 1.5,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 4
+        },
+        {
+          "playerId": "pinchester",
+          "username": "PINCHESTER",
+          "points": 0,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "swiss:a9OaC2T4",
+      "lichessId": "a9OaC2T4",
+      "type": "swiss",
+      "name": "Colegas de Federer - Swiss 3+0",
+      "startAt": "2020-11-07T22:00:00.000Z",
+      "url": "https://lichess.org/swiss/a9OaC2T4",
+      "results": [
+        {
+          "playerId": "bratac38",
+          "username": "Bratac38",
+          "points": 2.5,
+          "rank": 1
+        },
+        {
+          "playerId": "sunnyandsammy2020",
+          "username": "sunnyandsammy2020",
+          "points": 2.5,
+          "rank": 2
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "edu_baranowski",
+          "username": "edu_baranowski",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "rafael_fantastico",
+          "username": "Rafael_Fantastico",
+          "points": 0.5,
+          "rank": 5
+        },
+        {
+          "playerId": "luispi_2009",
+          "username": "Luispi_2009",
+          "points": 0.5,
+          "rank": 6
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 0,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "swiss:V2p2fpNX",
+      "lichessId": "V2p2fpNX",
+      "type": "swiss",
+      "name": "Daily swiss 2+0",
+      "startAt": "2020-11-10T20:00:00.000Z",
+      "url": "https://lichess.org/swiss/V2p2fpNX",
+      "results": [
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "me3000",
+          "username": "me3000",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 2.5,
+          "rank": 3
+        },
+        {
+          "playerId": "lakshya_thakwani20",
+          "username": "LaKsHyA_tHaKwAnI20",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 0.5,
+          "rank": 5
+        },
+        {
+          "playerId": "gkoul",
+          "username": "gkoul",
+          "points": 0.5,
+          "rank": 6
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 0,
+          "rank": 7
+        },
+        {
+          "playerId": "ganesh2209",
+          "username": "Ganesh2209",
+          "points": 0,
+          "rank": 8
+        },
+        {
+          "playerId": "pinchester",
+          "username": "PINCHESTER",
+          "points": 0,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "swiss:pVEpohMP",
+      "lichessId": "pVEpohMP",
+      "type": "swiss",
+      "name": "DAILY COLEGAS 3+2 SWISS",
+      "startAt": "2020-11-12T12:00:00.000Z",
+      "url": "https://lichess.org/swiss/pVEpohMP",
+      "results": [
+        {
+          "playerId": "maestrobolillo",
+          "username": "maestrobolillo",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "angel33m",
+          "username": "Angel33M",
+          "points": 2,
+          "rank": 3
+        },
+        {
+          "playerId": "beniii",
+          "username": "beniii",
+          "points": 1.5,
+          "rank": 4
+        },
+        {
+          "playerId": "sanjay_subbu2010",
+          "username": "Sanjay_Subbu2010",
+          "points": 0.5,
+          "rank": 5
+        },
+        {
+          "playerId": "perichete",
+          "username": "Perichete",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "dd102011",
+          "username": "Dd102011",
+          "points": 0,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "swiss:DGpLBjqG",
+      "lichessId": "DGpLBjqG",
+      "type": "swiss",
+      "name": "Colegas in the nigth SWISS 3+0",
+      "startAt": "2020-11-23T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/DGpLBjqG",
+      "results": [
+        {
+          "playerId": "buats",
+          "username": "Buats",
+          "points": 3.5,
+          "rank": 1
+        },
+        {
+          "playerId": "redoyamo",
+          "username": "redoyamo",
+          "points": 2.5,
+          "rank": 2
+        },
+        {
+          "playerId": "marcosrezasalgado04",
+          "username": "marcosrezasalgado04",
+          "points": 2,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 1,
+          "rank": 5
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "swiss:GwHgsxen",
+      "lichessId": "GwHgsxen",
+      "type": "swiss",
+      "name": "Colegas de Federer 2+0",
+      "startAt": "2021-02-01T20:00:00.000Z",
+      "url": "https://lichess.org/swiss/GwHgsxen",
+      "results": [
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 10.5,
+          "rank": 1
+        },
+        {
+          "playerId": "ril-1997",
+          "username": "ril-1997",
+          "points": 8.5,
+          "rank": 2
+        },
+        {
+          "playerId": "nowinchess",
+          "username": "NowInChess",
+          "points": 7,
+          "rank": 3
+        },
+        {
+          "playerId": "strikerperruno",
+          "username": "Strikerperruno",
+          "points": 6.5,
+          "rank": 4
+        },
+        {
+          "playerId": "redoyamo",
+          "username": "redoyamo",
+          "points": 6.5,
+          "rank": 5
+        },
+        {
+          "playerId": "zb_igr",
+          "username": "ZB_IGR",
+          "points": 6.5,
+          "rank": 6
+        },
+        {
+          "playerId": "hxxdlxxvz",
+          "username": "HxxdLxxvz",
+          "points": 6.5,
+          "rank": 7
+        },
+        {
+          "playerId": "claudio81",
+          "username": "Claudio81",
+          "points": 5,
+          "rank": 8
+        },
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 4.5,
+          "rank": 9
+        },
+        {
+          "playerId": "xadrezcedeira",
+          "username": "Xadrezcedeira",
+          "points": 4.5,
+          "rank": 10
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 4,
+          "rank": 11
+        },
+        {
+          "playerId": "homero75",
+          "username": "Homero75",
+          "points": 3,
+          "rank": 12
+        },
+        {
+          "playerId": "daaniwaar",
+          "username": "Daaniwaar",
+          "points": 3,
+          "rank": 13
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 1.5,
+          "rank": 14
+        },
+        {
+          "playerId": "igor_yasakov",
+          "username": "igor_yasakov",
+          "points": 1.5,
+          "rank": 15
+        },
+        {
+          "playerId": "travieso123",
+          "username": "Travieso123",
+          "points": 1,
+          "rank": 16
+        },
+        {
+          "playerId": "bh6529943",
+          "username": "bh6529943",
+          "points": 1,
+          "rank": 17
+        },
+        {
+          "playerId": "nil020",
+          "username": "Nil020",
+          "points": 0.5,
+          "rank": 18
+        },
+        {
+          "playerId": "zygomatum",
+          "username": "zygomatum",
+          "points": 0.5,
+          "rank": 19
+        },
+        {
+          "playerId": "mariafernanda2001",
+          "username": "MariaFernanda2001",
+          "points": 0,
+          "rank": 20
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 0,
+          "rank": 21
+        },
+        {
+          "playerId": "torralbsen",
+          "username": "torralbsen",
+          "points": 0,
+          "rank": 22
+        }
+      ]
+    },
+    {
+      "id": "swiss:CM7wWcNB",
+      "lichessId": "CM7wWcNB",
+      "type": "swiss",
+      "name": "Colegas de Federer - swiss 3+0",
+      "startAt": "2021-02-05T17:00:00.000Z",
+      "url": "https://lichess.org/swiss/CM7wWcNB",
+      "results": [
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "playerId": "superclorinda",
+          "username": "superclorinda",
+          "points": 5.5,
+          "rank": 2
+        },
+        {
+          "playerId": "gambitoalaplancha",
+          "username": "GambitoALaPlancha",
+          "points": 3.5,
+          "rank": 3
+        },
+        {
+          "playerId": "johanshuanca",
+          "username": "JohansHuanca",
+          "points": 3.5,
+          "rank": 4
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "l1_-7",
+          "username": "l1_-7",
+          "points": 2.5,
+          "rank": 6
+        },
+        {
+          "playerId": "redoyamo",
+          "username": "redoyamo",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "ziogino",
+          "username": "Ziogino",
+          "points": 1.5,
+          "rank": 8
+        },
+        {
+          "playerId": "viswa15-09-2014",
+          "username": "viswa15-09-2014",
+          "points": 1,
+          "rank": 9
+        },
+        {
+          "playerId": "ald2",
+          "username": "ald2",
+          "points": 0.5,
+          "rank": 10
+        },
+        {
+          "playerId": "chapulineando",
+          "username": "Chapulineando",
+          "points": 0.5,
+          "rank": 11
+        },
+        {
+          "playerId": "manumm",
+          "username": "manumm",
+          "points": 0.5,
+          "rank": 12
+        },
+        {
+          "playerId": "jossymon",
+          "username": "Jossymon",
+          "points": 0.5,
+          "rank": 13
+        },
+        {
+          "playerId": "elkake",
+          "username": "elkake",
+          "points": 0,
+          "rank": 14
+        },
+        {
+          "playerId": "sonny2011",
+          "username": "sonny2011",
+          "points": 0,
+          "rank": 15
+        }
+      ]
+    },
+    {
+      "id": "swiss:ijAzqroP",
+      "lichessId": "ijAzqroP",
+      "type": "swiss",
+      "name": "Colegas bullet 1+0",
+      "startAt": "2021-02-11T16:00:00.000Z",
+      "url": "https://lichess.org/swiss/ijAzqroP",
+      "results": [
+        {
+          "playerId": "avyay_sharma",
+          "username": "AVYAY_SHARMA",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "wilsonia",
+          "username": "Wilsonia",
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "zai123456789",
+          "username": "zai123456789",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "shreyansh_gm",
+          "username": "shreyansh_gm",
+          "points": 1,
+          "rank": 6
+        },
+        {
+          "playerId": "gcu4tl0",
+          "username": "gcu4tl0",
+          "points": 1,
+          "rank": 7
+        },
+        {
+          "playerId": "sohandey_ind",
+          "username": "sohandey_ind",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "sjaikarthik_2005",
+          "username": "SJAIKARTHIK_2005",
+          "points": 0,
+          "rank": 9
+        },
+        {
+          "playerId": "bh6529943",
+          "username": "bh6529943",
+          "points": 0,
+          "rank": 10
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 11
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 0,
+          "rank": 12
+        }
+      ]
+    },
+    {
+      "id": "swiss:VuYegFht",
+      "lichessId": "VuYegFht",
+      "type": "swiss",
+      "name": "Colegas de Federer 3+0",
+      "startAt": "2021-03-05T17:00:00.000Z",
+      "url": "https://lichess.org/swiss/VuYegFht",
+      "results": [
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 4.5,
+          "rank": 1
+        },
+        {
+          "playerId": "gcu4tl0",
+          "username": "gcu4tl0",
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 3.5,
+          "rank": 3
+        },
+        {
+          "playerId": "fabian-alejandro",
+          "username": "Fabian-Alejandro",
+          "points": 3.5,
+          "rank": 4
+        },
+        {
+          "playerId": "mrrey2021",
+          "username": "MrRey2021",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "ziogino",
+          "username": "Ziogino",
+          "points": 2.5,
+          "rank": 6
+        },
+        {
+          "playerId": "raphaeltryhard",
+          "username": "raphaeltryhard",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 2,
+          "rank": 8
+        },
+        {
+          "playerId": "glaycell",
+          "username": "Glaycell",
+          "points": 1,
+          "rank": 9
+        },
+        {
+          "playerId": "egfgf",
+          "username": "egfgf",
+          "points": 1,
+          "rank": 10
+        },
+        {
+          "playerId": "jaquesl",
+          "username": "JaqueSL",
+          "points": 0.5,
+          "rank": 11
+        },
+        {
+          "playerId": "nancy1966",
+          "username": "nancy1966",
+          "points": 0.5,
+          "rank": 12
+        },
+        {
+          "playerId": "ant0712",
+          "username": "Ant0712",
+          "points": 0.5,
+          "rank": 13
+        },
+        {
+          "playerId": "eliasbelmonte1990acm",
+          "username": "Eliasbelmonte1990ACM",
+          "points": 0.5,
+          "rank": 14
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 15
+        }
+      ]
+    },
+    {
+      "id": "swiss:CQ09YY7a",
+      "lichessId": "CQ09YY7a",
+      "type": "swiss",
+      "name": "𝗖𝗢𝗟𝗘𝗚𝗔𝗦 𝗦𝗪𝗜𝗦𝗦 1+0",
+      "startAt": "2021-04-21T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/CQ09YY7a",
+      "results": [
+        {
+          "playerId": "gloosito",
+          "username": "Gloosito",
+          "points": 7,
+          "rank": 1
+        },
+        {
+          "playerId": "aragonian78",
+          "username": "Aragonian78",
+          "points": 5,
+          "rank": 2
+        },
+        {
+          "playerId": "benjadruetto",
+          "username": "benjadruetto",
+          "points": 5,
+          "rank": 3
+        },
+        {
+          "playerId": "andik35",
+          "username": "ANDIK35",
+          "points": 4.5,
+          "rank": 4
+        },
+        {
+          "playerId": "kbpl_junior",
+          "username": "KBPL_JUNIOR",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "lemmadito",
+          "username": "Lemmadito",
+          "points": 1,
+          "rank": 6
+        },
+        {
+          "playerId": "gmigurnys",
+          "username": "GMIGURNYS",
+          "points": 1,
+          "rank": 7
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "ahmedovshaxriyor",
+          "username": "AhmedovShaxriyor",
+          "points": 1,
+          "rank": 9
+        },
+        {
+          "playerId": "locomooooootion22",
+          "username": "Locomooooootion22",
+          "points": 1,
+          "rank": 10
+        },
+        {
+          "playerId": "ludwigferreras2013",
+          "username": "ludwigferreras2013",
+          "points": 0,
+          "rank": 11
+        },
+        {
+          "playerId": "julkies",
+          "username": "julkies",
+          "points": 0,
+          "rank": 12
+        }
+      ]
+    },
+    {
+      "id": "swiss:9rvFEHOJ",
+      "lichessId": "9rvFEHOJ",
+      "type": "swiss",
+      "name": "Torneo colegas de kike",
+      "startAt": "2021-06-07T14:00:00.000Z",
+      "url": "https://lichess.org/swiss/9rvFEHOJ",
+      "results": [
+        {
+          "playerId": "isabel_diaz_ayuso",
+          "username": "Isabel_Diaz_Ayuso",
+          "points": 6,
+          "rank": 1
+        },
+        {
+          "playerId": "gambitoalaplancha",
+          "username": "GambitoALaPlancha",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "sachitachess",
+          "username": "Sachitachess",
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "circolobrigaglia",
+          "username": "circolobrigaglia",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "leobenitez",
+          "username": "leobenitez",
+          "points": 2.5,
+          "rank": 6
+        },
+        {
+          "playerId": "sciens",
+          "username": "SCIENS",
+          "points": 1.5,
+          "rank": 7
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "chirag2011",
+          "username": "chirag2011",
+          "points": 0,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "swiss:TTgJXfC3",
+      "lichessId": "TTgJXfC3",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2021-06-13T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/TTgJXfC3",
+      "results": [
+        {
+          "playerId": "lolamentogg",
+          "username": "LolaMentoGG",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 1,
+          "rank": 2
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "ginginginiwantgin",
+          "username": "ginginginiwantgin",
+          "points": 0,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "swiss:8L2fR4Kn",
+      "lichessId": "8L2fR4Kn",
+      "type": "swiss",
+      "name": "Suizo colegas sabadete",
+      "startAt": "2021-06-19T20:00:00.000Z",
+      "url": "https://lichess.org/swiss/8L2fR4Kn",
+      "results": [
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "kakakasparov",
+          "username": "kakakasparov",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 5
+        },
+        {
+          "playerId": "ismaelgh16",
+          "username": "IsmaelGH16",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "isabel_diaz_ayuso",
+          "username": "Isabel_Diaz_Ayuso",
+          "points": 0,
+          "rank": 7
+        },
+        {
+          "playerId": "lolamentogg",
+          "username": "LolaMentoGG",
+          "points": 0,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "swiss:f5FyriQg",
+      "lichessId": "f5FyriQg",
+      "type": "swiss",
+      "name": "SUIZO COLEGAS DE KIKE",
+      "startAt": "2021-06-24T13:08:48.000Z",
+      "url": "https://lichess.org/swiss/f5FyriQg",
+      "results": [
+        {
+          "playerId": "derty0",
+          "username": "Derty0",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "wilsonia",
+          "username": "Wilsonia",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "gcuatlo_off",
+          "username": "gcuatlo_off",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "luancaushaj",
+          "username": "Luancaushaj",
+          "points": 3.5,
+          "rank": 4
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "migueldelibex35",
+          "username": "migueldelibex35",
+          "points": 3,
+          "rank": 6
+        },
+        {
+          "playerId": "mamasitaisback",
+          "username": "Mamasitaisback",
+          "points": 3,
+          "rank": 7
+        },
+        {
+          "playerId": "cidrudriq3",
+          "username": "CidRudriq3",
+          "points": 3,
+          "rank": 8
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 2,
+          "rank": 9
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 2,
+          "rank": 10
+        },
+        {
+          "playerId": "h_hossaini4739",
+          "username": "H_hossaini4739",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "bersek_account",
+          "username": "Bersek_account",
+          "points": 0.5,
+          "rank": 12
+        },
+        {
+          "playerId": "mattoxsanyearzero",
+          "username": "MattoxSanYearZero",
+          "points": 0.5,
+          "rank": 13
+        }
+      ]
+    },
+    {
+      "id": "swiss:vl78dpzh",
+      "lichessId": "vl78dpzh",
+      "type": "swiss",
+      "name": "LE DUIFET COLEGAS DE KIKE",
+      "startAt": "2021-06-24T13:57:18.000Z",
+      "url": "https://lichess.org/swiss/vl78dpzh",
+      "results": [
+        {
+          "playerId": "gcuatlo_off",
+          "username": "gcuatlo_off",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 3,
+          "rank": 2
+        },
+        {
+          "playerId": "matayo",
+          "username": "matayo",
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "playerId": "cidrudriq3",
+          "username": "CidRudriq3",
+          "points": 2.5,
+          "rank": 4
+        },
+        {
+          "playerId": "ahmedovshaxriyor",
+          "username": "AhmedovShaxriyor",
+          "points": 1.5,
+          "rank": 5
+        },
+        {
+          "playerId": "derty0",
+          "username": "Derty0",
+          "points": 1,
+          "rank": 6
+        },
+        {
+          "playerId": "mamasitaisback",
+          "username": "Mamasitaisback",
+          "points": 1,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "swiss:f3I8gu3T",
+      "lichessId": "f3I8gu3T",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2021-07-05T11:45:00.000Z",
+      "url": "https://lichess.org/swiss/f3I8gu3T",
+      "results": [
+        {
+          "playerId": "khamoumafan9",
+          "username": "KhamoumaFan9",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "mamasitaisback",
+          "username": "Mamasitaisback",
+          "points": 5,
+          "rank": 2
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 4.5,
+          "rank": 3
+        },
+        {
+          "playerId": "gcuatlo_off",
+          "username": "gcuatlo_off",
+          "points": 2.5,
+          "rank": 4
+        },
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 2.5,
+          "rank": 5
+        },
+        {
+          "playerId": "troy_off",
+          "username": "Troy_OFF",
+          "points": 2.5,
+          "rank": 6
+        },
+        {
+          "playerId": "ajedrecistafeliz",
+          "username": "Ajedrecistafeliz",
+          "points": 1.5,
+          "rank": 7
+        },
+        {
+          "playerId": "zeta_off",
+          "username": "Zeta_OFF",
+          "points": 1.5,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "swiss:QfOX8pzy",
+      "lichessId": "QfOX8pzy",
+      "type": "swiss",
+      "name": "Colegas de federer",
+      "startAt": "2021-07-07T20:00:00.000Z",
+      "url": "https://lichess.org/swiss/QfOX8pzy",
+      "results": [
+        {
+          "playerId": "mamasitaisback",
+          "username": "Mamasitaisback",
+          "points": 4.5,
+          "rank": 1
+        },
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "playerId": "luancaushaj",
+          "username": "Luancaushaj",
+          "points": 3.5,
+          "rank": 3
+        },
+        {
+          "playerId": "troy_off",
+          "username": "Troy_OFF",
+          "points": 2.5,
+          "rank": 4
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 2.5,
+          "rank": 5
+        },
+        {
+          "playerId": "superclorinda",
+          "username": "superclorinda",
+          "points": 2,
+          "rank": 6
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 7
+        },
+        {
+          "playerId": "gcuatlo_off",
+          "username": "gcuatlo_off",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "kike_off",
+          "username": "Kike_OFF",
+          "points": 0,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "swiss:KEGgpSFF",
+      "lichessId": "KEGgpSFF",
+      "type": "swiss",
+      "name": "Colegas de Federer",
+      "startAt": "2021-07-23T20:00:00.000Z",
+      "url": "https://lichess.org/swiss/KEGgpSFF",
+      "results": [
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "ismaelgh16",
+          "username": "IsmaelGH16",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "troy_off",
+          "username": "Troy_OFF",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "frajedrez",
+          "username": "Frajedrez",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "sahuaripa",
+          "username": "Sahuaripa",
+          "points": 0,
+          "rank": 5
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "swiss:BjIx4Uya",
+      "lichessId": "BjIx4Uya",
+      "type": "swiss",
+      "name": "Gcuatlo forever",
+      "startAt": "2021-08-26T15:00:00.000Z",
+      "url": "https://lichess.org/swiss/BjIx4Uya",
+      "results": [
+        {
+          "playerId": "lightomorrowithtoday",
+          "username": "LighTomorrowithTODAY",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "lolamentogg",
+          "username": "LolaMentoGG",
+          "points": 1.5,
+          "rank": 2
+        },
+        {
+          "playerId": "kike_off",
+          "username": "Kike_OFF",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 0,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "swiss:ieSxlh01",
+      "lichessId": "ieSxlh01",
+      "type": "swiss",
+      "name": "Strker suizo",
+      "startAt": "2021-08-26T15:15:00.000Z",
+      "url": "https://lichess.org/swiss/ieSxlh01",
+      "results": [
+        {
+          "playerId": "lightomorrowithtoday",
+          "username": "LighTomorrowithTODAY",
+          "points": 5.5,
+          "rank": 1
+        },
+        {
+          "playerId": "gcuatlo",
+          "username": "gcuatlo",
+          "points": 4.5,
+          "rank": 2
+        },
+        {
+          "playerId": "kike_off",
+          "username": "Kike_OFF",
+          "points": 2.5,
+          "rank": 3
+        },
+        {
+          "playerId": "lolamentogg",
+          "username": "LolaMentoGG",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "jairgadget",
+          "username": "JairGadget",
+          "points": 1.5,
+          "rank": 5
+        },
+        {
+          "playerId": "kishan_chess",
+          "username": "Kishan_chess",
+          "points": 1.5,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "swiss:Iuw6Vvm2",
+      "lichessId": "Iuw6Vvm2",
+      "type": "swiss",
+      "name": "SWISS COLEGAS DE KIKE",
+      "startAt": "2021-09-15T18:30:00.000Z",
+      "url": "https://lichess.org/swiss/Iuw6Vvm2",
+      "results": [
+        {
+          "playerId": "jesusgil_atletico",
+          "username": "JesusGil_Atletico",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "nubo4ka",
+          "username": "nubo4ka",
+          "points": 0,
+          "rank": 4
+        },
+        {
+          "playerId": "troy_off",
+          "username": "Troy_OFF",
+          "points": 0,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "swiss:lftKJoSq",
+      "lichessId": "lftKJoSq",
+      "type": "swiss",
+      "name": "Madrid Relámpago Entrenamiento",
+      "startAt": "2021-09-23T11:00:00.000Z",
+      "url": "https://lichess.org/swiss/lftKJoSq",
+      "results": [
+        {
+          "playerId": "troy_off",
+          "username": "Troy_OFF",
+          "points": 4,
+          "rank": 1
+        },
+        {
+          "playerId": "lolamentogg",
+          "username": "LolaMentoGG",
+          "points": 2.5,
+          "rank": 2
+        },
+        {
+          "playerId": "milonbiswas",
+          "username": "MilonBiswas",
+          "points": 2,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "abu-mejor",
+          "username": "abu-mejor",
+          "points": 1,
+          "rank": 5
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "swiss:0DbT4DFA",
+      "lichessId": "0DbT4DFA",
+      "type": "swiss",
+      "name": "Colegas suizo",
+      "startAt": "2021-11-01T22:08:00.000Z",
+      "url": "https://lichess.org/swiss/0DbT4DFA",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "quedatencasa",
+          "username": "QUEDATENCASA",
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "kolos006",
+          "username": "kolos006",
+          "points": 4,
+          "rank": 4
+        },
+        {
+          "playerId": "juanmariacoaragon",
+          "username": "JuanMariaCoAragon",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "ukrainfkr13",
+          "username": "UkrainFkr13",
+          "points": 3,
+          "rank": 6
+        },
+        {
+          "playerId": "maresca1977",
+          "username": "maresca1977",
+          "points": 1.5,
+          "rank": 7
+        },
+        {
+          "playerId": "chessofexperts",
+          "username": "ChessOfExperts",
+          "points": 1,
+          "rank": 8
+        },
+        {
+          "playerId": "viudatrasmate",
+          "username": "Viudatrasmate",
+          "points": 0.5,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "swiss:1I5sCF6p",
+      "lichessId": "1I5sCF6p",
+      "type": "swiss",
+      "name": "Colegas in the morning",
+      "startAt": "2022-01-03T11:00:00.000Z",
+      "url": "https://lichess.org/swiss/1I5sCF6p",
+      "results": [
+        {
+          "playerId": "jamomo",
+          "username": "jamomo",
+          "points": 1,
+          "rank": 1
+        },
+        {
+          "playerId": "troy_off",
+          "username": "Troy_OFF",
+          "points": 1,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrecistafeliz",
+          "username": "Ajedrecistafeliz",
+          "points": 0.5,
+          "rank": 3
+        },
+        {
+          "playerId": "tumadreporsiacaso",
+          "username": "Tumadreporsiacaso",
+          "points": 0,
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "swiss:eQzfjlWE",
+      "lichessId": "eQzfjlWE",
+      "type": "swiss",
+      "name": "Colegas de federer",
+      "startAt": "2022-03-08T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/eQzfjlWE",
+      "results": [
+        {
+          "playerId": "blitzek",
+          "username": "Blitzek",
+          "points": 5,
+          "rank": 1
+        },
+        {
+          "playerId": "nuevarosita",
+          "username": "Nuevarosita",
+          "points": 3.5,
+          "rank": 2
+        },
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 2.5,
+          "rank": 3
+        },
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 2.5,
+          "rank": 4
+        },
+        {
+          "playerId": "omtezien",
+          "username": "Omtezien",
+          "points": 1.5,
+          "rank": 5
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 1.5,
+          "rank": 6
+        },
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 1,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "swiss:y0PQPKkK",
+      "lichessId": "y0PQPKkK",
+      "type": "swiss",
+      "name": "colegas de federer",
+      "startAt": "2022-03-14T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/y0PQPKkK",
+      "results": [
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "vikendi",
+          "username": "vikendi",
+          "points": 1,
+          "rank": 2
+        },
+        {
+          "playerId": "freddy86",
+          "username": "Freddy86",
+          "points": 0,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "swiss:NC7JRfBd",
+      "lichessId": "NC7JRfBd",
+      "type": "swiss",
+      "name": "Colegas in the morning",
+      "startAt": "2022-08-28T10:00:00.000Z",
+      "url": "https://lichess.org/swiss/NC7JRfBd",
+      "results": [
+        {
+          "playerId": "rrirrautentico",
+          "username": "RRiRRautentico",
+          "points": 1,
+          "rank": 1
+        },
+        {
+          "playerId": "migueldelibex35",
+          "username": "migueldelibex35",
+          "points": 0,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "swiss:YEFMIAn0",
+      "lichessId": "YEFMIAn0",
+      "type": "swiss",
+      "name": "Colegas de federer",
+      "startAt": "2023-04-21T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/YEFMIAn0",
+      "results": [
+        {
+          "playerId": "rrirrautentico",
+          "username": "RRiRRautentico",
+          "points": 3,
+          "rank": 1
+        },
+        {
+          "playerId": "hadiaslani12",
+          "username": "Hadiaslani12",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "albertoeloso",
+          "username": "AlbertoelOso",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "manueltc",
+          "username": "manueltc",
+          "points": 1,
+          "rank": 4
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "swiss:qT7YP9Lv",
+      "lichessId": "qT7YP9Lv",
+      "type": "swiss",
+      "name": "Colegas de federer",
+      "startAt": "2024-01-12T21:00:00.000Z",
+      "url": "https://lichess.org/swiss/qT7YP9Lv",
+      "results": [
+        {
+          "playerId": "sofiode_2",
+          "username": "Sofiode_2",
+          "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "rrirrautentico",
+          "username": "RRiRRautentico",
+          "points": 2,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 1,
+          "rank": 3
+        },
+        {
+          "playerId": "paquetovic",
+          "username": "PAQUETOVIC",
+          "points": 1,
+          "rank": 4
+        }
+      ]
+    }
+  ]
 }
