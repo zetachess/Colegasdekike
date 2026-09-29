@@ -129,9 +129,9 @@ export default function Leaderboard() {
 
       <section className="intro">
         <div className="intro-copy">
-          <p className="eyebrow"><span className="live-dot" /> PUNTUACIÓN DEL EQUIPO</p>
+          <p className="eyebrow"><span className="live-dot" /> BATALLAS POR EQUIPOS</p>
           <h1>¿Quién<br /><em>manda?</em></h1>
-          <p className="intro-description">Los puntos de cada torneo, sumados para ver quién está arriba.</p>
+          <p className="intro-description">Los puntos que suma cada jugador en las batallas donde participa Colegas de Kike.</p>
         </div>
         <div className="intro-stamp" aria-hidden="true">
           <span className="stamp-ring">CLASIFICACIÓN · LICHESS · COLEGAS DE KIKE · </span>
@@ -203,7 +203,7 @@ export default function Leaderboard() {
           Lichess ya no ofrece los resultados de {data.unavailableTournamentCount} torneos antiguos de Arena; no se incluyen en los puntos.
         </p>
       )}
-      <div className="site-credit"><span>HECHO PARA JUGAR EN EQUIPO</span><span>DATOS PÚBLICOS DE LICHESS</span></div>
+      <div className="site-credit"><span>BATALLAS DE COLEGAS DE KIKE</span><span>DATOS PÚBLICOS DE LICHESS</span></div>
     </main>
   );
 }
