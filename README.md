@@ -4,7 +4,7 @@ Web pública con el top 10 de puntos de Lichess de todos los tiempos y de la sem
 
 ## Cómo funciona
 
-- GitHub Actions consulta cada hora hasta 10.000 torneos Arena y Swiss del equipo `colegas-de-kike` por tipo; la API los devuelve del más reciente al más antiguo. Puedes ajustar el límite con `LICHESS_TOURNAMENT_LIMIT`.
+- GitHub Actions consulta cada hora hasta 1.000 torneos Arena y Swiss del equipo `colegas-de-kike` por tipo; la API los devuelve del más reciente al más antiguo. Puedes ajustar el límite con `LICHESS_TOURNAMENT_LIMIT`.
 - Para las batallas Arena, importa la tabla pública de jugadores de Colegas de Kike dentro de cada torneo (no la clasificación general, que mezcla a todos los equipos). Para Swiss, importa la clasificación individual del endpoint público de resultados.
 - La acción importa los resultados solo cuando el torneo termina. Cada torneo y jugador se guardan una sola vez, así que una nueva ejecución no duplica puntos.
 - Los datos persisten como JSON en la rama `leaderboard-data`. GitHub Actions usa el `GITHUB_TOKEN` automático del repositorio; no hay base de datos externa ni claves que crear.
@@ -19,7 +19,7 @@ Web pública con el top 10 de puntos de Lichess de todos los tiempos y de la sem
 3. GitHub puede retrasar los trabajos programados cuando tiene mucha carga. También puedes lanzarlo en cualquier momento desde **Actions → Actualizar clasificación → Run workflow**.
 4. Importa el repositorio en Vercel. Activa la exposición de variables de sistema de Git en el proyecto para que la web detecte automáticamente el propietario y el nombre del repositorio.
 
-La rama `leaderboard-data` debe ser pública para que Vercel pueda leer el JSON sin credenciales. La importación recoge el histórico accesible por la API (hasta el límite configurado de 10.000 por tipo); la web indica la fecha más antigua disponible. Los resultados futuros se agregan sin intervención manual.
+La rama `leaderboard-data` debe ser pública para que Vercel pueda leer el JSON sin credenciales. La importación recoge el histórico accesible por la API (hasta el límite configurado de 1.000 por tipo); la web indica la fecha más antigua disponible. Los resultados futuros se agregan sin intervención manual.
 
 ## Desarrollo local
 
