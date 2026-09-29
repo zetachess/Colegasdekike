@@ -5,6 +5,9 @@ import { rankPlayers } from "../../../lib/leaderboard.mjs";
 
 export const runtime = "nodejs";
 
+const defaultDataRepoOwner = "zetachess";
+const defaultDataRepoName = "Colegasdekike";
+
 type TournamentResult = {
   playerId: string;
   username: string;
@@ -38,15 +41,14 @@ const EMPTY_DATA: Dataset = {
 };
 
 async function loadDataset(): Promise<Dataset> {
-  const owner = process.env.VERCEL_GIT_REPO_OWNER;
-  const repo = process.env.VERCEL_GIT_REPO_SLUG;
-
-  if (owner && repo) {
-    const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/leaderboard-data/data/leaderboard.json`;
-    const response = await fetch(rawUrl, { next: { revalidate: 300 } });
-    if (response.ok) return (await response.json()) as Dataset;
-    if (response.status !== 404) throw new Error(`No se pudo leer el archivo de puntos (${response.status}).`);
-  }
+  // Vercel does not expose these system variables in every project by default.
+  // Keep the public repo as a fallback so the deployed page can always find its data.
+  const owner = process.env.VERCEL_GIT_REPO_OWNER || defaultDataRepoOwner;
+  const repo = process.env.VERCEL_GIT_REPO_SLUG || defaultDataRepoName;
+  const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/leaderboard-data/data/leaderboard.json`;
+  const response = await fetch(rawUrl, { next: { revalidate: 300 } });
+  if (response.ok) return (await response.json()) as Dataset;
+  if (response.status !== 404) throw new Error(`No se pudo leer el archivo de puntos (${response.status}).`);
 
   try {
     const localFile = path.join(process.cwd(), "data", "leaderboard.json");
