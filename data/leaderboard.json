@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-09-30T02:11:13.778Z",
+  "updatedAt": "2026-09-30T08:31:12.929Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -75539,6 +75539,74 @@
           "username": "ajedrezconzeta",
           "points": 10,
           "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "arena:VfvaIUvH",
+      "lichessId": "VfvaIUvH",
+      "type": "arena",
+      "name": "GP Chess Night Team Battle",
+      "startAt": "2026-09-29T16:30:00.000Z",
+      "url": "https://lichess.org/tournament/VfvaIUvH",
+      "results": [
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 8,
+          "rank": 1
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 2
+        },
+        {
+          "playerId": "grancapanga",
+          "username": "grancapanga",
+          "points": 0,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "arena:8L75v0zU",
+      "lichessId": "8L75v0zU",
+      "type": "arena",
+      "name": "LMAO Night 411 Team Battle",
+      "startAt": "2026-09-29T19:00:00.000Z",
+      "url": "https://lichess.org/tournament/8L75v0zU",
+      "results": [
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 20,
+          "rank": 1
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 8,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 5,
+          "rank": 3
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 0,
+          "rank": 5
         }
       ]
     }
