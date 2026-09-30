@@ -1,6 +1,6 @@
 # Clasificación de Colegas de Kike
 
-Web pública con el top 10 de puntos individuales sumados por los miembros de Colegas de Kike en Batallas por equipos de Lichess, de todos los tiempos y de la semana actual.
+Web pública con la clasificación completa de puntos individuales sumados en Batallas por equipos de Colegas de Kike en Lichess. Muestra el histórico, la semana actual y el podio de hoy.
 
 ## Cómo funciona
 
@@ -11,6 +11,7 @@ Web pública con el top 10 de puntos individuales sumados por los miembros de Co
 - No requiere registrarte en otro servicio: utiliza tus cuentas de GitHub y Vercel, que ya forman parte del plan.
 - Vercel sirve la web desde `main` y lee el JSON público de `leaderboard-data`. `vercel.json` evita despliegues cada vez que cambia solo la información; los cambios del frontend en `main` sí se despliegan.
 - El top semanal usa la semana natural de Madrid y asigna los puntos a la semana en que empezó el torneo.
+- El podio diario muestra solo los tres primeros y cuenta las batallas según su fecha de inicio en Madrid. Puede estar vacío hasta que termine una batalla y se publique la siguiente sincronización.
 
 ## Publicar
 
@@ -28,6 +29,15 @@ Requiere Node.js 20.9 o posterior.
 ```bash
 npm install
 npm run dev
+```
+
+La interfaz usa `lucide-react` para los iconos y adapta los patrones de búsqueda y pestañas de Sera UI al CSS del proyecto. La skill `frontend-design` de AI Templates está en `.claude/skills/frontend-design/`.
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+npm test
 ```
 
 Para probar la sincronización manualmente:

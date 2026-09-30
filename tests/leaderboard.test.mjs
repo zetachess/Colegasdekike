@@ -30,3 +30,14 @@ test("ranking counts Team Battle Arena only and uses the start date in Madrid fo
   assert.equal(weekly.entries[0].points, 3);
   assert.equal(weekly.tournamentCount, 1);
 });
+
+test("ranking returns every eligible player in score order", () => {
+  const results = Array.from({ length: 18 }, (_, index) =>
+    result(`player${index}`, `Player${index}`, 100 - index),
+  );
+  const board = rankPlayers({ tournaments: [
+    tournament("arena:many-players", "2026-09-28T09:00:00.000Z", "arena", results),
+  ] });
+  assert.equal(board.entries.length, 18);
+  assert.deepEqual(board.entries.slice(0, 3).map((player) => player.points), [100, 99, 98]);
+});
