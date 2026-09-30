@@ -45,7 +45,6 @@ export async function GET() {
     const now = new Date();
     const allTime = rankPlayers(dataset, "all", now);
     const thisWeek = rankPlayers(dataset, "week", now);
-    const today = rankPlayers(dataset, "day", now);
     const results = dataset.tournaments
       .filter((tournament) => tournament.type === "arena")
       .flatMap((tournament) => tournament.results);
@@ -53,17 +52,14 @@ export async function GET() {
     const response = NextResponse.json({
       allTime: allTime.entries,
       thisWeek: thisWeek.entries,
-      today: today.entries.slice(0, 3),
       updatedAt: dataset.updatedAt,
       coverageFrom: dataset.coverageFrom,
       tournamentCount: allTime.tournamentCount,
       weekTournamentCount: thisWeek.tournamentCount,
-      todayTournamentCount: today.tournamentCount,
       uniquePlayers: new Set(results.map((result) => result.playerId)).size,
       totalPoints: results.reduce((sum, result) => sum + result.points, 0),
       unavailableTournamentCount: dataset.unavailableTournamentIds?.length ?? 0,
       weekStart: thisWeek.weekStart,
-      todayStart: today.dayStart,
     });
     response.headers.set("Cache-Control", "no-store");
     return response;

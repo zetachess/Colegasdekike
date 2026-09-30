@@ -9,7 +9,6 @@ import {
   RefreshCw,
   Search,
   Swords,
-  Trophy,
   X,
 } from "lucide-react";
 import NumberTicker from "./number-ticker";
@@ -23,40 +22,33 @@ type Player = {
 };
 
 type RankedPlayer = Player & { rank: number };
-type Period = "all" | "week" | "day";
+type Period = "week" | "all";
 
 type BoardData = {
   allTime: Player[];
   thisWeek: Player[];
-  today: Player[];
   updatedAt: string | null;
   coverageFrom: string | null;
   tournamentCount: number;
   weekTournamentCount: number;
-  todayTournamentCount: number;
   totalPoints: number;
-  unavailableTournamentCount: number;
   weekStart: string | null;
 };
 
 const EMPTY_BOARD: BoardData = {
   allTime: [],
   thisWeek: [],
-  today: [],
   updatedAt: null,
   coverageFrom: null,
   tournamentCount: 0,
   weekTournamentCount: 0,
-  todayTournamentCount: 0,
   totalPoints: 0,
-  unavailableTournamentCount: 0,
   weekStart: null,
 };
 
 const periods: { value: Period; label: string }[] = [
+  { value: "week", label: "TOP SEMANAL!" },
   { value: "all", label: "Siempre" },
-  { value: "week", label: "Esta semana" },
-  { value: "day", label: "Hoy" },
 ];
 
 const numberFormat = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 });
@@ -211,7 +203,7 @@ export default function Leaderboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [period, setPeriod] = useState<Period>("all");
+  const [period, setPeriod] = useState<Period>("week");
   const searchRef = useRef<HTMLInputElement>(null);
 
   const loadBoard = useCallback(async (initial = false) => {
@@ -254,7 +246,7 @@ export default function Leaderboard() {
     .filter((player) => !normalizedSearch
       || player.username.toLocaleLowerCase("es").includes(normalizedSearch)
       || player.playerId.toLocaleLowerCase("es").includes(normalizedSearch));
-  const sourcePlayers = period === "all" ? data.allTime : period === "week" ? data.thisWeek : data.today;
+  const sourcePlayers = period === "week" ? data.thisWeek : data.allTime;
   const players = filterPlayers(sourcePlayers);
   const hasData = Boolean(data.updatedAt || data.allTime.length);
 
@@ -266,10 +258,6 @@ export default function Leaderboard() {
   return (
     <main className="dashboard-shell">
       <header className="dashboard-header">
-        <a className="dashboard-brand" href="https://lichess.org/team/colegas-de-kike" target="_blank" rel="noreferrer">
-          <span className="brand-knight" aria-hidden="true">♞</span>
-          <span><strong>Colegas de Kike</strong><small>Clasificación de torneos</small></span>
-        </a>
         <a className="team-link" href="https://lichess.org/team/colegas-de-kike" target="_blank" rel="noreferrer">
           Ver equipo <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
         </a>
@@ -310,7 +298,6 @@ export default function Leaderboard() {
           <section className="single-ranking" aria-label="Clasificación de jugadores">
             <PeriodTabs value={period} onChange={setPeriod} />
             <div id="ranking-panel" role="tabpanel" aria-labelledby={`tab-${period}`}>
-            {period !== "day" && (
               <div className="player-search">
                 <div className="search-field">
                   <Search size={18} strokeWidth={1.8} aria-hidden="true" />
@@ -339,17 +326,9 @@ export default function Leaderboard() {
                 </div>
                 <span className="search-hint">{normalizedSearch ? `${players.length} ${players.length === 1 ? "resultado" : "resultados"}` : "Busca entre todos los jugadores"}</span>
               </div>
-            )}
-            {(!normalizedSearch || period === "day") && <TrophyPodium players={sourcePlayers.slice(0, 3)} />}
-            {period === "day" ? (
-              data.todayTournamentCount > 0 ? (
-                <p className="daily-caption">{data.todayTournamentCount} {data.todayTournamentCount === 1 ? "torneo finalizado" : "torneos finalizados"} hoy. Aquí se muestran los tres primeros.</p>
-              ) : (
-                <div className="empty-state"><Trophy size={25} strokeWidth={1.5} aria-hidden="true" /><strong>Aún no hay puntos de hoy</strong><p>El podio aparecerá cuando termine un torneo del equipo y se actualicen los resultados.</p></div>
-              )
-            ) : (
+              {!normalizedSearch && <TrophyPodium players={sourcePlayers.slice(0, 3)} />}
               <PlayerTable
-                title={`Jugadores · ${period === "all" ? "Siempre" : "Esta semana"}`}
+                title={`Jugadores · ${period === "week" ? "TOP SEMANAL!" : "Siempre"}`}
                 subtitle={period === "all" ? "Histórico" : `${data.weekTournamentCount} ${data.weekTournamentCount === 1 ? "torneo" : "torneos"}`}
                 players={players}
                 totalPlayers={sourcePlayers.length}
@@ -357,7 +336,6 @@ export default function Leaderboard() {
                   ? "No hay jugadores que coincidan."
                   : period === "all" ? "Aún no hay puntos históricos disponibles." : "Todavía no hay puntos esta semana."}
               />
-            )}
             </div>
           </section>
         </>
@@ -368,11 +346,6 @@ export default function Leaderboard() {
         <span>Histórico desde {formatDate(data.coverageFrom)}</span>
         <span>Semana natural · hora de Madrid</span>
       </footer>
-      {data.unavailableTournamentCount > 0 && (
-        <p className="coverage-note">
-          Lichess ya no ofrece los resultados de {data.unavailableTournamentCount} torneos antiguos; no se incluyen en los puntos.
-        </p>
-      )}
     </main>
   );
 }

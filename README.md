@@ -1,6 +1,6 @@
 # Clasificación de Colegas de Kike
 
-Web pública con la clasificación completa de puntos individuales sumados en Batallas por equipos de Colegas de Kike en Lichess. Muestra el histórico, la semana actual y el podio de hoy.
+Web pública con la clasificación completa de puntos individuales sumados en Batallas por equipos de Colegas de Kike en Lichess. Abre con el top semanal y permite consultar el histórico.
 
 ## Cómo funciona
 
@@ -11,7 +11,7 @@ Web pública con la clasificación completa de puntos individuales sumados en Ba
 - No requiere registrarte en otro servicio: utiliza tus cuentas de GitHub y Vercel, que ya forman parte del plan.
 - Vercel sirve la web desde `main` y lee el JSON público de `leaderboard-data`. `vercel.json` evita despliegues cada vez que cambia solo la información; los cambios del frontend en `main` sí se despliegan.
 - El top semanal usa la semana natural de Madrid y asigna los puntos a la semana en que empezó el torneo.
-- El podio diario muestra solo los tres primeros y cuenta las batallas según su fecha de inicio en Madrid. Puede estar vacío hasta que termine una batalla y se publique la siguiente sincronización.
+- El podio muestra los tres primeros jugadores del periodo seleccionado.
 
 ## Publicar
 
