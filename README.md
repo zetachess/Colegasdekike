@@ -4,7 +4,7 @@ Web pública con la clasificación completa de puntos individuales sumados en Ba
 
 ## Cómo funciona
 
-- GitHub Actions consulta cada hora hasta 1.000 torneos Arena asociados al equipo `colegas-de-kike`; la API los devuelve del más reciente al más antiguo. En el histórico consultado, esos eventos son Batallas por equipos. Puedes ajustar el límite con `LICHESS_TOURNAMENT_LIMIT`.
+- GitHub Actions consulta cada 20 minutos hasta 1.000 torneos Arena asociados al equipo `colegas-de-kike`; la API los devuelve del más reciente al más antiguo. En el histórico consultado, esos eventos son Batallas por equipos. Puedes ajustar el límite con `LICHESS_TOURNAMENT_LIMIT`.
 - Importa la tabla pública de jugadores de Colegas de Kike dentro de cada batalla, no la clasificación general que mezcla a todos los equipos. Los torneos Swiss no se cuentan en este ranking.
 - La acción importa los resultados solo cuando el torneo termina. Cada torneo y jugador se guardan una sola vez, así que una nueva ejecución no duplica puntos.
 - Los datos persisten como JSON en la rama `leaderboard-data`. GitHub Actions usa el `GITHUB_TOKEN` automático del repositorio; no hay base de datos externa ni claves que crear.
@@ -15,7 +15,7 @@ Web pública con la clasificación completa de puntos individuales sumados en Ba
 
 ## Publicar
 
-1. Crea un repositorio **público** en GitHub y sube el contenido de esta carpeta a su rama principal. Al subirlo, la importación inicial arranca sola; después se ejecuta cada hora.
+1. Crea un repositorio **público** en GitHub y sube el contenido de esta carpeta a su rama principal. Al subirlo, la importación inicial arranca sola; después se ejecuta cada 20 minutos.
 2. En GitHub, permite a Actions escribir en el repositorio: **Settings → Actions → General → Workflow permissions → Read and write permissions**. El workflow usa su token integrado, no un token personal.
 3. GitHub puede retrasar los trabajos programados cuando tiene mucha carga. También puedes lanzarlo en cualquier momento desde **Actions → Actualizar clasificación → Run workflow**.
 4. Importa el repositorio en Vercel. La web ya conoce el repositorio público donde se guardan los puntos; no hay que configurar variables de entorno para leerlos.

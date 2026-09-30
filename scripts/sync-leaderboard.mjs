@@ -231,7 +231,7 @@ for (const type of ["arena"]) {
     } catch (error) {
       if (error instanceof Error && error.message.includes("Lichess returned 404")) {
         // Some old team Arena listings outlive the team-specific standings page.
-        // Record them once so hourly syncs do not retry permanently missing data.
+        // Record them once so scheduled syncs do not retry permanently missing data.
         dataset.unavailableTournamentIds.push(compositeId);
         knownIds.add(compositeId);
         await writeDataset(dataset);
