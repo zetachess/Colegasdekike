@@ -1,17 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import {
   ChartNoAxesCombined,
   CircleAlert,
   ExternalLink,
-  Medal,
   RefreshCw,
   Search,
   Swords,
   Trophy,
   X,
 } from "lucide-react";
+import NumberTicker from "./number-ticker";
+import SparklesTitle from "./sparkles-title";
 
 type Player = {
   playerId: string;
@@ -99,11 +101,11 @@ function TrophyPodium({ players }: { players: Player[] }) {
     <section className={`trophy-podium trophy-podium--${winners.length}`} aria-label="Podio de los tres primeros">
       {winners.map(({ player, rank }) => (
         <a className={`podium-place podium-place--${rank}`} href={profileUrl(player.username)} target="_blank" rel="noreferrer" key={player.playerId}>
-          <span className="podium-medal" aria-hidden="true">{rank === 1 ? <Trophy size={31} strokeWidth={1.7} /> : <Medal size={28} strokeWidth={1.7} />}</span>
+          <span className="podium-medal" aria-hidden="true"><Image src="/trophy-3d.png" alt="" width={72} height={72} /></span>
           <span className="podium-rank">{rank === 1 ? "1.º puesto" : `${rank}.º puesto`}</span>
           <strong className="podium-player" title={player.username}>{player.username}</strong>
           <span className="podium-points">{formatPoints(player.points)} <small>puntos</small></span>
-          <span className="podium-battles">{player.tournaments} {player.tournaments === 1 ? "batalla" : "batallas"}</span>
+          <span className="podium-tournaments">{player.tournaments} {player.tournaments === 1 ? "torneo" : "torneos"}</span>
         </a>
       ))}
     </section>
@@ -173,7 +175,7 @@ function PlayerTable({
               <th className="column-rank" scope="col">#</th>
               <th scope="col">Jugador</th>
               <th className="column-score" scope="col">Puntos</th>
-              <th className="column-events" scope="col">Batallas</th>
+              <th className="column-events" scope="col">Torneos</th>
             </tr>
           </thead>
           <tbody>
@@ -257,8 +259,8 @@ export default function Leaderboard() {
   const hasData = Boolean(data.updatedAt || data.allTime.length);
 
   const stats = [
-    { label: "Batallas contadas", value: numberFormat.format(data.tournamentCount), icon: Swords },
-    { label: "Puntos sumados", value: numberFormat.format(data.totalPoints), icon: ChartNoAxesCombined },
+    { label: "Torneos contados", value: data.tournamentCount, icon: Swords },
+    { label: "Puntos sumados", value: data.totalPoints, icon: ChartNoAxesCombined },
   ];
 
   return (
@@ -266,7 +268,7 @@ export default function Leaderboard() {
       <header className="dashboard-header">
         <a className="dashboard-brand" href="https://lichess.org/team/colegas-de-kike" target="_blank" rel="noreferrer">
           <span className="brand-knight" aria-hidden="true">♞</span>
-          <span><strong>Colegas de Kike</strong><small>Clasificación de batallas</small></span>
+          <span><strong>Colegas de Kike</strong><small>Clasificación de torneos</small></span>
         </a>
         <a className="team-link" href="https://lichess.org/team/colegas-de-kike" target="_blank" rel="noreferrer">
           Ver equipo <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
@@ -275,8 +277,8 @@ export default function Leaderboard() {
 
       <div className="dashboard-title">
         <div>
-          <p className="dashboard-eyebrow"><span className="status-dot" /> Batallas por equipos</p>
-          <h1>Marcador del equipo</h1>
+          <p className="dashboard-eyebrow"><span className="status-dot" /> Torneos por equipos</p>
+          <SparklesTitle />
         </div>
         <span className="week-range">{formatWeekRange(data.weekStart)}</span>
       </div>
@@ -291,7 +293,7 @@ export default function Leaderboard() {
 
       {loading ? (
         <div className="dashboard-loading" aria-label="Cargando clasificación">
-          <RefreshCw className="loading-icon" size={19} aria-hidden="true" /> Cargando puntos de las batallas…
+          <RefreshCw className="loading-icon" size={19} aria-hidden="true" /> Cargando puntos de los torneos…
         </div>
       ) : !hasData && error ? null : (
         <>
@@ -299,7 +301,7 @@ export default function Leaderboard() {
             {stats.map((stat) => (
               <article className="stat-card" key={stat.label}>
                 <stat.icon className="stat-mark" size={21} strokeWidth={1.7} aria-hidden="true" />
-                <strong>{stat.value}</strong>
+                <strong><NumberTicker value={stat.value} /></strong>
                 <span className="stat-label">{stat.label}</span>
               </article>
             ))}
@@ -341,14 +343,14 @@ export default function Leaderboard() {
             {(!normalizedSearch || period === "day") && <TrophyPodium players={sourcePlayers.slice(0, 3)} />}
             {period === "day" ? (
               data.todayTournamentCount > 0 ? (
-                <p className="daily-caption">{data.todayTournamentCount} {data.todayTournamentCount === 1 ? "batalla finalizada" : "batallas finalizadas"} hoy. Aquí se muestran los tres primeros.</p>
+                <p className="daily-caption">{data.todayTournamentCount} {data.todayTournamentCount === 1 ? "torneo finalizado" : "torneos finalizados"} hoy. Aquí se muestran los tres primeros.</p>
               ) : (
-                <div className="empty-state"><Trophy size={25} strokeWidth={1.5} aria-hidden="true" /><strong>Aún no hay puntos de hoy</strong><p>El podio aparecerá cuando termine una batalla del equipo y se actualicen los resultados.</p></div>
+                <div className="empty-state"><Trophy size={25} strokeWidth={1.5} aria-hidden="true" /><strong>Aún no hay puntos de hoy</strong><p>El podio aparecerá cuando termine un torneo del equipo y se actualicen los resultados.</p></div>
               )
             ) : (
               <PlayerTable
                 title={`Jugadores · ${period === "all" ? "Siempre" : "Esta semana"}`}
-                subtitle={period === "all" ? "Histórico" : `${data.weekTournamentCount} ${data.weekTournamentCount === 1 ? "batalla" : "batallas"}`}
+                subtitle={period === "all" ? "Histórico" : `${data.weekTournamentCount} ${data.weekTournamentCount === 1 ? "torneo" : "torneos"}`}
                 players={players}
                 totalPlayers={sourcePlayers.length}
                 emptyMessage={normalizedSearch
@@ -368,7 +370,7 @@ export default function Leaderboard() {
       </footer>
       {data.unavailableTournamentCount > 0 && (
         <p className="coverage-note">
-          Lichess ya no ofrece los resultados de {data.unavailableTournamentCount} batallas antiguas; no se incluyen en los puntos.
+          Lichess ya no ofrece los resultados de {data.unavailableTournamentCount} torneos antiguos; no se incluyen en los puntos.
         </p>
       )}
     </main>
