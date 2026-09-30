@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-09-30T14:46:29.299Z",
+  "updatedAt": "2026-09-30T19:39:35.300Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -75607,6 +75607,184 @@
           "username": "Danzino21",
           "points": 0,
           "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "arena:Hj6k696K",
+      "lichessId": "Hj6k696K",
+      "type": "arena",
+      "name": "GP Chess Day Team Battle",
+      "startAt": "2026-09-30T04:30:00.000Z",
+      "url": "https://lichess.org/tournament/Hj6k696K",
+      "results": [
+        {
+          "playerId": "makar1964",
+          "username": "makar1964",
+          "points": 38,
+          "rank": 1
+        },
+        {
+          "playerId": "zopenkahuer",
+          "username": "zopenkahuer",
+          "points": 25,
+          "rank": 2
+        },
+        {
+          "playerId": "jesucristo_and_satan",
+          "username": "Jesucristo_and_satan",
+          "points": 16,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 5,
+          "rank": 4
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 4,
+          "rank": 5
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 3,
+          "rank": 6
+        },
+        {
+          "playerId": "faustercio",
+          "username": "Faustercio",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 0,
+          "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "arena:4MzbxMfI",
+      "lichessId": "4MzbxMfI",
+      "type": "arena",
+      "name": "LMAO Day 412 Team Battle",
+      "startAt": "2026-09-30T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/4MzbxMfI",
+      "results": [
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 8,
+          "rank": 1
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 6,
+          "rank": 2
+        },
+        {
+          "playerId": "invalid94",
+          "username": "invalid94",
+          "points": 6,
+          "rank": 3
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "arena:l0sHh45E",
+      "lichessId": "l0sHh45E",
+      "type": "arena",
+      "name": "617th ULTRAbullet Team Battle",
+      "startAt": "2026-09-30T14:00:00.000Z",
+      "url": "https://lichess.org/tournament/l0sHh45E",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 50,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "arena:hgSdfUz2",
+      "lichessId": "hgSdfUz2",
+      "type": "arena",
+      "name": "Lichess Bullet League 47A Team Battle",
+      "startAt": "2026-09-30T18:00:00.000Z",
+      "url": "https://lichess.org/tournament/hgSdfUz2",
+      "results": [
+        {
+          "playerId": "doktorzet",
+          "username": "doktorzet",
+          "points": 44,
+          "rank": 1
+        },
+        {
+          "playerId": "arielhechavarria",
+          "username": "arielhechavarria",
+          "points": 28,
+          "rank": 2
+        },
+        {
+          "playerId": "fanradu77",
+          "username": "fanradu77",
+          "points": 28,
+          "rank": 3
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 23,
+          "rank": 4
+        },
+        {
+          "playerId": "vladymyr1657",
+          "username": "vladymyr1657",
+          "points": 19,
+          "rank": 5
+        },
+        {
+          "playerId": "slayerblue_09",
+          "username": "slayerblue_09",
+          "points": 8,
+          "rank": 6
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 7,
+          "rank": 7
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 8
         }
       ]
     }
