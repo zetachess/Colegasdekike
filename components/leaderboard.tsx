@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ChartNoAxesCombined,
   CircleAlert,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 import NumberTicker from "./number-ticker";
 import SparklesTitle from "./sparkles-title";
+import { translations, type Language } from "@/lib/translations";
 
 type Player = {
   playerId: string;
@@ -46,20 +48,13 @@ const EMPTY_BOARD: BoardData = {
   weekStart: null,
 };
 
-const periods: { value: Period; label: string }[] = [
-  { value: "week", label: "TOP SEMANAL!" },
-  { value: "all", label: "Siempre" },
-];
-
-const numberFormat = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 1 });
-
-function formatPoints(points: number) {
-  return numberFormat.format(points);
+function formatPoints(points: number, language: Language) {
+  return new Intl.NumberFormat(language === "es" ? "es-ES" : "en-US", { maximumFractionDigits: 1 }).format(points);
 }
 
-function formatDate(value: string | null, options: Intl.DateTimeFormatOptions = {}) {
-  if (!value) return "Pendiente";
-  return new Intl.DateTimeFormat("es-ES", {
+function formatDate(value: string | null, language: Language, options: Intl.DateTimeFormatOptions = {}) {
+  if (!value) return translations[language].pending;
+  return new Intl.DateTimeFormat(language === "es" ? "es-ES" : "en-US", {
     timeZone: "Europe/Madrid",
     day: "numeric",
     month: "short",
@@ -68,20 +63,21 @@ function formatDate(value: string | null, options: Intl.DateTimeFormatOptions = 
   }).format(new Date(value));
 }
 
-function formatWeekRange(weekStart: string | null) {
-  if (!weekStart) return "Semana actual · hora de Madrid";
+function formatWeekRange(weekStart: string | null, language: Language) {
+  if (!weekStart) return translations[language].currentWeek;
   const start = new Date(`${weekStart}T12:00:00.000Z`);
   const end = new Date(start);
   end.setUTCDate(end.getUTCDate() + 6);
-  const format = new Intl.DateTimeFormat("es-ES", { timeZone: "Europe/Madrid", day: "numeric", month: "short" });
-  return `${format.format(start)} – ${format.format(end)} · Madrid`;
+  const format = new Intl.DateTimeFormat(language === "es" ? "es-ES" : "en-US", { timeZone: "Europe/Madrid", day: "numeric", month: "short" });
+  return `${format.format(start)} – ${format.format(end)} · ${translations[language].madrid}`;
 }
 
 function profileUrl(username: string) {
   return `https://lichess.org/@/${encodeURIComponent(username)}`;
 }
 
-function TrophyPodium({ players }: { players: Player[] }) {
+function TrophyPodium({ players, language }: { players: Player[]; language: Language }) {
+  const t = translations[language];
   const winners = [
     { player: players[1], rank: 2 },
     { player: players[0], rank: 1 },
@@ -90,23 +86,28 @@ function TrophyPodium({ players }: { players: Player[] }) {
   if (!players.length) return null;
 
   return (
-    <section className={`trophy-podium trophy-podium--${winners.length}`} aria-label="Podio de los tres primeros">
+    <section className={`trophy-podium trophy-podium--${winners.length}`} aria-label={t.podium}>
       {winners.map(({ player, rank }) => (
         <a className={`podium-place podium-place--${rank}`} href={profileUrl(player.username)} target="_blank" rel="noreferrer" key={player.playerId}>
           <span className="podium-medal" aria-hidden="true"><Image src="/trophy-3d.png" alt="" width={72} height={72} /></span>
-          <span className="podium-rank">{rank === 1 ? "1.º puesto" : `${rank}.º puesto`}</span>
+          <span className="podium-rank">{t.place(rank)}</span>
           <strong className="podium-player" title={player.username}>{player.username}</strong>
-          <span className="podium-points">{formatPoints(player.points)} <small>puntos</small></span>
-          <span className="podium-tournaments">{player.tournaments} {player.tournaments === 1 ? "torneo" : "torneos"}</span>
+          <span className="podium-points">{formatPoints(player.points, language)} <small>{t.points}</small></span>
+          <span className="podium-tournaments">{player.tournaments} {t.tournament(player.tournaments)}</span>
         </a>
       ))}
     </section>
   );
 }
 
-function PeriodTabs({ value, onChange }: { value: Period; onChange: (period: Period) => void }) {
+function PeriodTabs({ value, onChange, language }: { value: Period; onChange: (period: Period) => void; language: Language }) {
+  const t = translations[language];
+  const periods: { value: Period; label: string }[] = [
+    { value: "week", label: t.weeklyTop },
+    { value: "all", label: t.allTime },
+  ];
   return (
-    <div className="period-switch" role="tablist" aria-label="Periodo de clasificación">
+    <div className="period-switch" role="tablist" aria-label={t.rankingPeriod}>
       {periods.map((period, index) => (
         <button
           key={period.value}
@@ -144,30 +145,33 @@ function PlayerTable({
   players,
   totalPlayers,
   emptyMessage,
+  language,
 }: {
   title: string;
   subtitle: string;
   players: RankedPlayer[];
   totalPlayers: number;
   emptyMessage: string;
+  language: Language;
 }) {
+  const t = translations[language];
   return (
     <section className="ranking-card" aria-label={title}>
       <div className="ranking-card__heading">
         <div>
-          <p className="section-kicker">Clasificación</p>
+          <p className="section-kicker">{t.ranking}</p>
           <h2>{title}</h2>
         </div>
-        <span className="ranking-card__period">{players.length === totalPlayers ? `${totalPlayers} jugadores` : `${players.length} de ${totalPlayers}`} <span aria-hidden="true">·</span> {subtitle}</span>
+        <span className="ranking-card__period">{players.length === totalPlayers ? `${totalPlayers} ${t.players(totalPlayers)}` : t.outOf(players.length, totalPlayers)} <span aria-hidden="true">·</span> {subtitle}</span>
       </div>
       <div className="table-scroll">
         <table className="compact-table">
           <thead>
             <tr>
               <th className="column-rank" scope="col">#</th>
-              <th scope="col">Jugador</th>
-              <th className="column-score" scope="col">Puntos</th>
-              <th className="column-events" scope="col">Torneos</th>
+              <th scope="col">{t.player}</th>
+              <th className="column-score" scope="col">{t.pointsHeader}</th>
+              <th className="column-events" scope="col">{t.tournaments}</th>
             </tr>
           </thead>
           <tbody>
@@ -179,13 +183,13 @@ function PlayerTable({
                   {String(player.rank).padStart(2, "0")}
                 </td>
                 <td className="player-cell">
-                  <a href={profileUrl(player.username)} target="_blank" rel="noreferrer" title={`Ver ${player.username} en Lichess`}>
+                  <a href={profileUrl(player.username)} target="_blank" rel="noreferrer" title={t.profile(player.username)}>
                     <span className="player-name">{player.username}</span><ExternalLink size={12} strokeWidth={1.8} aria-hidden="true" />
                   </a>
                 </td>
                 <td className="score-cell">
                   <div className="score-value">
-                    <strong>{formatPoints(player.points)}</strong>
+                    <strong>{formatPoints(player.points, language)}</strong>
                   </div>
                 </td>
                 <td className="event-count">{player.tournaments}</td>
@@ -198,10 +202,11 @@ function PlayerTable({
   );
 }
 
-export default function Leaderboard() {
+export default function Leaderboard({ language }: { language: Language }) {
+  const t = translations[language];
   const [data, setData] = useState<BoardData>(EMPTY_BOARD);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [period, setPeriod] = useState<Period>("week");
   const searchRef = useRef<HTMLInputElement>(null);
@@ -209,12 +214,12 @@ export default function Leaderboard() {
   const loadBoard = useCallback(async (initial = false) => {
     try {
       const response = await fetch("/api/leaderboard", { cache: "no-store" });
-      if (!response.ok) throw new Error("No se pudo cargar la clasificación.");
+      if (!response.ok) throw new Error("Leaderboard request failed");
       const result = (await response.json()) as BoardData;
       setData(result);
-      setError(null);
+      setError(false);
     } catch {
-      setError("Ahora mismo no se pueden cargar los puntos. Prueba de nuevo en un momento.");
+      setError(true);
     } finally {
       if (initial) setLoading(false);
     }
@@ -240,73 +245,77 @@ export default function Leaderboard() {
     return () => window.removeEventListener("keydown", handleShortcut);
   }, []);
 
-  const normalizedSearch = searchTerm.trim().toLocaleLowerCase("es");
+  const normalizedSearch = searchTerm.trim().toLocaleLowerCase(language);
   const filterPlayers = (players: Player[]): RankedPlayer[] => players
     .map((player, index) => ({ ...player, rank: index + 1 }))
     .filter((player) => !normalizedSearch
-      || player.username.toLocaleLowerCase("es").includes(normalizedSearch)
-      || player.playerId.toLocaleLowerCase("es").includes(normalizedSearch));
+      || player.username.toLocaleLowerCase(language).includes(normalizedSearch)
+      || player.playerId.toLocaleLowerCase(language).includes(normalizedSearch));
   const sourcePlayers = period === "week" ? data.thisWeek : data.allTime;
   const players = filterPlayers(sourcePlayers);
   const hasData = Boolean(data.updatedAt || data.allTime.length);
 
   const stats = [
-    { label: "Torneos contados", value: data.tournamentCount, icon: Swords },
-    { label: "Puntos sumados", value: data.totalPoints, icon: ChartNoAxesCombined },
+    { label: t.countedTournaments, value: data.tournamentCount, icon: Swords },
+    { label: t.totalPoints, value: data.totalPoints, icon: ChartNoAxesCombined },
   ];
 
   return (
     <main className="dashboard-shell">
       <header className="dashboard-header">
+        <nav className="language-switch" aria-label={language === "es" ? "Idioma" : "Language"}>
+          <Link href="/es" lang="es" hrefLang="es" aria-current={language === "es" ? "page" : undefined}>ES</Link>
+          <Link href="/" lang="en" hrefLang="en" aria-current={language === "en" ? "page" : undefined}>EN</Link>
+        </nav>
         <a className="team-link" href="https://lichess.org/team/colegas-de-kike" target="_blank" rel="noreferrer">
-          Ver equipo <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+          {t.viewTeam} <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
         </a>
       </header>
 
       <div className="dashboard-title">
         <div>
-          <p className="dashboard-eyebrow"><span className="status-dot" /> Torneos por equipos</p>
+          <p className="dashboard-eyebrow"><span className="status-dot" /> {t.teamTournaments}</p>
           <SparklesTitle />
         </div>
-        <span className="week-range">{formatWeekRange(data.weekStart)}</span>
+        <span className="week-range">{formatWeekRange(data.weekStart, language)}</span>
       </div>
 
       {error && (
         <div className="dashboard-error" role="alert">
           <CircleAlert size={17} aria-hidden="true" />
-          <span>{error}</span>
-          <button type="button" onClick={() => { setLoading(true); void loadBoard(true); }}><RefreshCw size={15} aria-hidden="true" /> Reintentar</button>
+          <span>{t.loadError}</span>
+          <button type="button" onClick={() => { setLoading(true); void loadBoard(true); }}><RefreshCw size={15} aria-hidden="true" /> {t.retry}</button>
         </div>
       )}
 
       {loading ? (
-        <div className="dashboard-loading" aria-label="Cargando clasificación">
-          <RefreshCw className="loading-icon" size={19} aria-hidden="true" /> Cargando puntos de los torneos…
+        <div className="dashboard-loading" aria-label={t.loadingLabel}>
+          <RefreshCw className="loading-icon" size={19} aria-hidden="true" /> {t.loading}
         </div>
       ) : !hasData && error ? null : (
         <>
-          <section className="stats-grid" aria-label="Resumen histórico">
+          <section className="stats-grid" aria-label={t.summary}>
             {stats.map((stat) => (
               <article className="stat-card" key={stat.label}>
                 <stat.icon className="stat-mark" size={21} strokeWidth={1.7} aria-hidden="true" />
-                <strong><NumberTicker value={stat.value} /></strong>
+                <strong><NumberTicker value={stat.value} language={language} /></strong>
                 <span className="stat-label">{stat.label}</span>
               </article>
             ))}
           </section>
 
-          <section className="single-ranking" aria-label="Clasificación de jugadores">
-            <PeriodTabs value={period} onChange={setPeriod} />
+          <section className="single-ranking" aria-label={t.playerRanking}>
+            <PeriodTabs value={period} onChange={setPeriod} language={language} />
             <div id="ranking-panel" role="tabpanel" aria-labelledby={`tab-${period}`}>
               <div className="player-search">
                 <div className="search-field">
                   <Search size={18} strokeWidth={1.8} aria-hidden="true" />
-                  <label className="visually-hidden" htmlFor="player-search">Buscar jugador por nombre</label>
+                  <label className="visually-hidden" htmlFor="player-search">{t.searchLabel}</label>
                   <input
                     id="player-search"
                     ref={searchRef}
                     type="search"
-                    placeholder="Buscar jugador por nombre"
+                    placeholder={t.searchLabel}
                     value={searchTerm}
                     onChange={(event) => setSearchTerm(event.target.value)}
                     onKeyDown={(event) => {
@@ -319,22 +328,23 @@ export default function Leaderboard() {
                     spellCheck={false}
                   />
                   {searchTerm ? (
-                    <button className="search-clear" type="button" onClick={() => { setSearchTerm(""); searchRef.current?.focus(); }} aria-label="Borrar búsqueda"><X size={16} aria-hidden="true" /></button>
+                    <button className="search-clear" type="button" onClick={() => { setSearchTerm(""); searchRef.current?.focus(); }} aria-label={t.clearSearch}><X size={16} aria-hidden="true" /></button>
                   ) : (
                     <kbd className="search-shortcut">Ctrl K</kbd>
                   )}
                 </div>
-                <span className="search-hint">{normalizedSearch ? `${players.length} ${players.length === 1 ? "resultado" : "resultados"}` : "Busca entre todos los jugadores"}</span>
+                <span className="search-hint">{normalizedSearch ? t.results(players.length) : t.searchHint}</span>
               </div>
-              {!normalizedSearch && <TrophyPodium players={sourcePlayers.slice(0, 3)} />}
+              {!normalizedSearch && <TrophyPodium players={sourcePlayers.slice(0, 3)} language={language} />}
               <PlayerTable
-                title={`Jugadores · ${period === "week" ? "TOP SEMANAL!" : "Siempre"}`}
-                subtitle={period === "all" ? "Histórico" : `${data.weekTournamentCount} ${data.weekTournamentCount === 1 ? "torneo" : "torneos"}`}
+                title={`${t.playersHeading} · ${period === "week" ? t.weeklyTop : t.allTime}`}
+                subtitle={period === "all" ? t.history : `${data.weekTournamentCount} ${t.tournament(data.weekTournamentCount)}`}
                 players={players}
                 totalPlayers={sourcePlayers.length}
                 emptyMessage={normalizedSearch
-                  ? "No hay jugadores que coincidan."
-                  : period === "all" ? "Aún no hay puntos históricos disponibles." : "Todavía no hay puntos esta semana."}
+                  ? t.noMatches
+                  : period === "all" ? t.noHistory : t.noWeek}
+                language={language}
               />
             </div>
           </section>
@@ -342,9 +352,9 @@ export default function Leaderboard() {
       )}
 
       <footer className="dashboard-footer">
-        <span className="footer-sync"><RefreshCw size={13} strokeWidth={1.8} aria-hidden="true" /> Actualizado {formatDate(data.updatedAt, { hour: "2-digit", minute: "2-digit" })}</span>
-        <span>Histórico desde {formatDate(data.coverageFrom)}</span>
-        <span>Semana natural · hora de Madrid</span>
+        <span className="footer-sync"><RefreshCw size={13} strokeWidth={1.8} aria-hidden="true" /> {t.updated} {formatDate(data.updatedAt, language, { hour: "2-digit", minute: "2-digit" })}</span>
+        <span>{t.coverage} {formatDate(data.coverageFrom, language)}</span>
+        <span>{t.weekTimezone}</span>
       </footer>
     </main>
   );
