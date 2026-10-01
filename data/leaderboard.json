@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-01T09:06:10.268Z",
+  "updatedAt": "2026-10-01T16:19:36.254Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -75877,6 +75877,22 @@
           "username": "Thorpon66",
           "points": 0,
           "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "arena:C0C7JnKX",
+      "lichessId": "C0C7JnKX",
+      "type": "arena",
+      "name": "618th ULTRAbullet Team Battle",
+      "startAt": "2026-10-01T14:00:00.000Z",
+      "url": "https://lichess.org/tournament/C0C7JnKX",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 10,
+          "rank": 1
         }
       ]
     }
