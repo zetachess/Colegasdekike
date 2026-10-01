@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-01T02:14:21.534Z",
+  "updatedAt": "2026-10-01T09:06:10.268Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -75731,6 +75731,46 @@
       ]
     },
     {
+      "id": "arena:vHH7JYl0",
+      "lichessId": "vHH7JYl0",
+      "type": "arena",
+      "name": "GP Chess Night Team Battle",
+      "startAt": "2026-09-30T16:30:00.000Z",
+      "url": "https://lichess.org/tournament/vHH7JYl0",
+      "results": [
+        {
+          "playerId": "toribiov",
+          "username": "toribiov",
+          "points": 42,
+          "rank": 1
+        },
+        {
+          "playerId": "orce78",
+          "username": "Orce78",
+          "points": 8,
+          "rank": 2
+        },
+        {
+          "playerId": "laiavg",
+          "username": "Laiavg",
+          "points": 6,
+          "rank": 3
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 5
+        }
+      ]
+    },
+    {
       "id": "arena:hgSdfUz2",
       "lichessId": "hgSdfUz2",
       "type": "arena",
@@ -75785,6 +75825,58 @@
           "username": "ajedrezconzeta",
           "points": 0,
           "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "arena:WIiGLnCK",
+      "lichessId": "WIiGLnCK",
+      "type": "arena",
+      "name": "LMAO Night 412 Team Battle",
+      "startAt": "2026-09-30T19:00:00.000Z",
+      "url": "https://lichess.org/tournament/WIiGLnCK",
+      "results": [
+        {
+          "playerId": "edomar246",
+          "username": "EdOmar246",
+          "points": 26,
+          "rank": 1
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 12,
+          "rank": 2
+        },
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 10,
+          "rank": 3
+        },
+        {
+          "playerId": "dampayla10",
+          "username": "Dampayla10",
+          "points": 4,
+          "rank": 4
+        },
+        {
+          "playerId": "on1ba",
+          "username": "On1ba",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 0,
+          "rank": 7
         }
       ]
     }
