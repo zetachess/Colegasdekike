@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-01T16:19:36.254Z",
+  "updatedAt": "2026-10-01T21:07:01.651Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -75877,6 +75877,88 @@
           "username": "Thorpon66",
           "points": 0,
           "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "arena:PULCDhuD",
+      "lichessId": "PULCDhuD",
+      "type": "arena",
+      "name": "LMAO Day 413 Team Battle",
+      "startAt": "2026-10-01T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/PULCDhuD",
+      "results": [
+        {
+          "playerId": "az1512",
+          "username": "AZ1512",
+          "points": 46,
+          "rank": 1
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 38,
+          "rank": 2
+        },
+        {
+          "playerId": "thesilverarcher",
+          "username": "TheSilverArcher",
+          "points": 35,
+          "rank": 3
+        },
+        {
+          "playerId": "elnylons",
+          "username": "ElNylons",
+          "points": 32,
+          "rank": 4
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 29,
+          "rank": 5
+        },
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 28,
+          "rank": 6
+        },
+        {
+          "playerId": "alexsp66",
+          "username": "Alexsp66",
+          "points": 28,
+          "rank": 7
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 4,
+          "rank": 8
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 4,
+          "rank": 9
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 4,
+          "rank": 10
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 12
         }
       ]
     },
