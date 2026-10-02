@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-02T12:51:32.232Z",
+  "updatedAt": "2026-10-02T18:18:43.627Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76079,6 +76079,56 @@
           "username": "dolmax",
           "points": 0,
           "rank": 12
+        }
+      ]
+    },
+    {
+      "id": "arena:a6ytkRLz",
+      "lichessId": "a6ytkRLz",
+      "type": "arena",
+      "name": "619th ULTRAbullet Team Battle",
+      "startAt": "2026-10-02T14:00:00.000Z",
+      "url": "https://lichess.org/tournament/a6ytkRLz",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 1
+        }
+      ]
+    },
+    {
+      "id": "arena:lHrgaZn3",
+      "lichessId": "lHrgaZn3",
+      "type": "arena",
+      "name": "149th Lichess Mega Team Battle",
+      "startAt": "2026-10-02T16:00:00.000Z",
+      "url": "https://lichess.org/tournament/lHrgaZn3",
+      "results": [
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 50,
+          "rank": 1
+        },
+        {
+          "playerId": "jmag",
+          "username": "jmag",
+          "points": 34,
+          "rank": 2
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 16,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 4
         }
       ]
     }
