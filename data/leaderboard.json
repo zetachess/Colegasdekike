@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-03T16:02:47.593Z",
+  "updatedAt": "2026-10-03T19:08:05.669Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76211,6 +76211,64 @@
           "username": "ajedrezconzeta",
           "points": 0,
           "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "arena:CrlQcHwg",
+      "lichessId": "CrlQcHwg",
+      "type": "arena",
+      "name": "LMAO Day 415 Team Battle",
+      "startAt": "2026-10-03T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/CrlQcHwg",
+      "results": [
+        {
+          "playerId": "alexsp66",
+          "username": "Alexsp66",
+          "points": 59,
+          "rank": 1
+        },
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 24,
+          "rank": 2
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 16,
+          "rank": 3
+        },
+        {
+          "playerId": "damefruta",
+          "username": "damefruta",
+          "points": 6,
+          "rank": 4
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "orzowey",
+          "username": "orzowey",
+          "points": 2,
+          "rank": 6
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 8
         }
       ]
     }
