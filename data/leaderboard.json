@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-04T17:02:28.776Z",
+  "updatedAt": "2026-10-04T20:01:35.625Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76337,6 +76337,58 @@
           "username": "kratos82",
           "points": 2,
           "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "arena:V40gYzJu",
+      "lichessId": "V40gYzJu",
+      "type": "arena",
+      "name": "LMAO Day 416 Team Battle",
+      "startAt": "2026-10-04T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/V40gYzJu",
+      "results": [
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 67,
+          "rank": 1
+        },
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 26,
+          "rank": 2
+        },
+        {
+          "playerId": "cazenga111",
+          "username": "Cazenga111",
+          "points": 11,
+          "rank": 3
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 9,
+          "rank": 4
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 5
+        },
+        {
+          "playerId": "manosss",
+          "username": "Manosss",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 0,
+          "rank": 7
         }
       ]
     },
