@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-04T06:24:05.532Z",
+  "updatedAt": "2026-10-04T12:34:34.043Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76269,6 +76269,68 @@
           "username": "ajedrezconzeta",
           "points": 0,
           "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "arena:9SNCXZ7M",
+      "lichessId": "9SNCXZ7M",
+      "type": "arena",
+      "name": "LMAO Night 415 Team Battle",
+      "startAt": "2026-10-03T19:00:00.000Z",
+      "url": "https://lichess.org/tournament/9SNCXZ7M",
+      "results": [
+        {
+          "playerId": "farodriguez",
+          "username": "Farodriguez",
+          "points": 56,
+          "rank": 1
+        },
+        {
+          "playerId": "edomar246",
+          "username": "EdOmar246",
+          "points": 52,
+          "rank": 2
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 40,
+          "rank": 3
+        },
+        {
+          "playerId": "az1512",
+          "username": "AZ1512",
+          "points": 8,
+          "rank": 4
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 4,
+          "rank": 5
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "arena:RU9eFQzU",
+      "lichessId": "RU9eFQzU",
+      "type": "arena",
+      "name": "Sunday League s03 e128 Team Battle",
+      "startAt": "2026-10-04T08:30:00.000Z",
+      "url": "https://lichess.org/tournament/RU9eFQzU",
+      "results": [
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 3,
+          "rank": 1
         }
       ]
     }
