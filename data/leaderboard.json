@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-07T13:56:09.983Z",
+  "updatedAt": "2026-10-07T19:50:40.045Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76448,6 +76448,58 @@
           "username": "Dampayla10",
           "points": 0,
           "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "arena:H77UAWh2",
+      "lichessId": "H77UAWh2",
+      "type": "arena",
+      "name": "Lichess Bullet League 48A Team Battle",
+      "startAt": "2026-10-07T18:00:00.000Z",
+      "url": "https://lichess.org/tournament/H77UAWh2",
+      "results": [
+        {
+          "playerId": "arielhechavarria",
+          "username": "arielhechavarria",
+          "points": 26,
+          "rank": 1
+        },
+        {
+          "playerId": "fanradu77",
+          "username": "fanradu77",
+          "points": 25,
+          "rank": 2
+        },
+        {
+          "playerId": "vladymyr1657",
+          "username": "vladymyr1657",
+          "points": 12,
+          "rank": 3
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 6,
+          "rank": 4
+        },
+        {
+          "playerId": "patata67",
+          "username": "patata67",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "locomooooootion22",
+          "username": "Locomooooootion22",
+          "points": 0,
+          "rank": 7
         }
       ]
     }
