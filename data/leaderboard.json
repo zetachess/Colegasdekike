@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-08T00:06:34.068Z",
+  "updatedAt": "2026-10-08T05:52:47.075Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76448,6 +76448,28 @@
           "username": "Dampayla10",
           "points": 0,
           "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "arena:u5efDqlj",
+      "lichessId": "u5efDqlj",
+      "type": "arena",
+      "name": "GP Chess Night Team Battle",
+      "startAt": "2026-10-07T16:30:00.000Z",
+      "url": "https://lichess.org/tournament/u5efDqlj",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 1
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 0,
+          "rank": 2
         }
       ]
     },
