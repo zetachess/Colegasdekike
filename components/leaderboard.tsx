@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import NumberTicker from "./number-ticker";
 import SparklesTitle from "./sparkles-title";
-import { translations, type Language } from "@/lib/translations";
+import { locales, translations, type Language } from "@/lib/translations";
 
 type Player = {
   playerId: string;
@@ -49,12 +49,12 @@ const EMPTY_BOARD: BoardData = {
 };
 
 function formatPoints(points: number, language: Language) {
-  return new Intl.NumberFormat(language === "es" ? "es-ES" : "en-US", { maximumFractionDigits: 1 }).format(points);
+  return new Intl.NumberFormat(locales[language], { maximumFractionDigits: 1 }).format(points);
 }
 
 function formatDate(value: string | null, language: Language, options: Intl.DateTimeFormatOptions = {}) {
   if (!value) return translations[language].pending;
-  return new Intl.DateTimeFormat(language === "es" ? "es-ES" : "en-US", {
+  return new Intl.DateTimeFormat(locales[language], {
     timeZone: "Europe/Madrid",
     day: "numeric",
     month: "short",
@@ -68,7 +68,7 @@ function formatWeekRange(weekStart: string | null, language: Language) {
   const start = new Date(`${weekStart}T12:00:00.000Z`);
   const end = new Date(start);
   end.setUTCDate(end.getUTCDate() + 6);
-  const format = new Intl.DateTimeFormat(language === "es" ? "es-ES" : "en-US", { timeZone: "Europe/Madrid", day: "numeric", month: "short" });
+  const format = new Intl.DateTimeFormat(locales[language], { timeZone: "Europe/Madrid", day: "numeric", month: "short" });
   return `${format.format(start)} – ${format.format(end)} · ${translations[language].madrid}`;
 }
 
@@ -263,9 +263,10 @@ export default function Leaderboard({ language }: { language: Language }) {
   return (
     <main className="dashboard-shell">
       <header className="dashboard-header">
-        <nav className="language-switch" aria-label={language === "es" ? "Idioma" : "Language"}>
+        <nav className="language-switch" aria-label={t.languageLabel}>
           <Link href="/es" lang="es" hrefLang="es" aria-current={language === "es" ? "page" : undefined}>ES</Link>
           <Link href="/" lang="en" hrefLang="en" aria-current={language === "en" ? "page" : undefined}>EN</Link>
+          <Link href="/fr" lang="fr" hrefLang="fr" aria-current={language === "fr" ? "page" : undefined}>FR</Link>
         </nav>
         <a className="team-link" href="https://lichess.org/team/colegas-de-kike" target="_blank" rel="noreferrer">
           {t.viewTeam} <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />

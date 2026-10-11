@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { Language } from "@/lib/translations";
+import { locales, type Language } from "@/lib/translations";
 
 type NumberTickerProps = {
   value: number;
@@ -11,7 +11,7 @@ type NumberTickerProps = {
 };
 
 export default function NumberTicker({ value, duration = 2000, delay = 0, language }: NumberTickerProps) {
-  const numberFormat = new Intl.NumberFormat(language === "es" ? "es-ES" : "en-US", { maximumFractionDigits: 0 });
+  const numberFormat = new Intl.NumberFormat(locales[language], { maximumFractionDigits: 0 });
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {

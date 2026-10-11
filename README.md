@@ -2,7 +2,7 @@
 
 Web pública con la clasificación completa de puntos individuales sumados en Batallas por equipos de Colegas de Kike en Lichess. Abre con el top semanal y permite consultar el histórico.
 
-La portada `/` está en inglés por defecto y `/es` muestra la misma clasificación en español. El selector ES/EN cambia de idioma sin traducir los nombres de los jugadores ni modificar los puntos. La dirección anterior `/en` sigue mostrando la versión inglesa. Los textos están revisados en `lib/translations.ts`; las fechas y cifras usan el formato de cada idioma.
+La portada `/` está en inglés por defecto, `/es` muestra la misma clasificación en español y `/fr` en francés. El selector ES/EN/FR cambia de idioma sin traducir los nombres de los jugadores ni modificar los puntos. La dirección anterior `/en` sigue mostrando la versión inglesa. Los textos están revisados en `lib/translations.ts`; las fechas y cifras usan el formato de cada idioma.
 
 ## Cómo funciona
 

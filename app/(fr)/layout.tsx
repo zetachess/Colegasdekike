@@ -1,0 +1,18 @@
+import type { Metadata } from "next";
+import "../globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://colegasdekike.vercel.app"),
+  title: "Colegas de Kike — Classement",
+  description: "Classement des points des tournois de Colegas de Kike sur Lichess.",
+  alternates: { canonical: "/fr", languages: { es: "/es", en: "/", fr: "/fr" } },
+  openGraph: {
+    title: "Colegas de Kike — Classement",
+    description: "Les joueurs qui marquent le plus de points cette semaine et depuis le début.",
+    type: "website",
+  },
+};
+
+export default function FrenchLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="fr"><body>{children}</body></html>;
+}

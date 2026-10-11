@@ -1,7 +1,14 @@
-export type Language = "es" | "en";
+export type Language = "es" | "en" | "fr";
+
+export const locales: Record<Language, string> = {
+  es: "es-ES",
+  en: "en-US",
+  fr: "fr-FR",
+};
 
 export const translations = {
   es: {
+    languageLabel: "Idioma",
     viewTeam: "Ver equipo",
     teamTournaments: "Torneos por equipos",
     currentWeek: "Semana actual · hora de Madrid",
@@ -43,6 +50,7 @@ export const translations = {
     weekTimezone: "Semana natural · hora de Madrid",
   },
   en: {
+    languageLabel: "Language",
     viewTeam: "View team",
     teamTournaments: "Team tournaments",
     currentWeek: "Current week · Madrid time",
@@ -82,5 +90,47 @@ export const translations = {
     updated: "Updated",
     coverage: "Records since",
     weekTimezone: "Monday–Sunday · Madrid time",
+  },
+  fr: {
+    languageLabel: "Langue",
+    viewTeam: "Voir l’équipe",
+    teamTournaments: "Tournois par équipes",
+    currentWeek: "Semaine en cours · heure de Madrid",
+    madrid: "Madrid",
+    pending: "En attente",
+    weeklyTop: "TOP DE LA SEMAINE !",
+    allTime: "Depuis le début",
+    rankingPeriod: "Période du classement",
+    podium: "Les trois premiers joueurs",
+    place: (rank: number) => rank === 1 ? "1re place" : `${rank}e place`,
+    points: "points",
+    pointsHeader: "Points",
+    tournament: (count: number) => count > 1 ? "tournois" : "tournoi",
+    ranking: "Classement",
+    playersHeading: "Joueurs",
+    players: (count: number) => count > 1 ? "joueurs" : "joueur",
+    outOf: (shown: number, total: number) => `${shown} sur ${total}`,
+    player: "Joueur",
+    tournaments: "Tournois",
+    profile: (username: string) => `Voir ${username} sur Lichess`,
+    loadError: "Les points ne sont pas disponibles pour le moment. Veuillez réessayer dans un instant.",
+    retry: "Réessayer",
+    loading: "Chargement des points des tournois…",
+    loadingLabel: "Chargement du classement",
+    summary: "Bilan depuis le début",
+    countedTournaments: "Tournois comptabilisés",
+    totalPoints: "Total des points",
+    playerRanking: "Classement des joueurs",
+    searchLabel: "Rechercher un joueur par nom",
+    clearSearch: "Effacer la recherche",
+    results: (count: number) => `${count} ${count > 1 ? "résultats" : "résultat"}`,
+    searchHint: "Rechercher parmi tous les joueurs",
+    history: "Historique",
+    noMatches: "Aucun joueur ne correspond à la recherche.",
+    noHistory: "Aucun point disponible dans l’historique pour le moment.",
+    noWeek: "Pas encore de points cette semaine.",
+    updated: "Mis à jour le",
+    coverage: "Historique depuis le",
+    weekTimezone: "Du lundi au dimanche · heure de Madrid",
   },
 } as const;
