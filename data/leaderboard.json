@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-11T13:53:58.556Z",
+  "updatedAt": "2026-10-11T18:13:29.224Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76522,6 +76522,34 @@
           "username": "Locomooooootion22",
           "points": 0,
           "rank": 7
+        }
+      ]
+    },
+    {
+      "id": "arena:ctWF7xip",
+      "lichessId": "ctWF7xip",
+      "type": "arena",
+      "name": "15+15-Sonntagnachmittag Team Battle",
+      "startAt": "2026-10-11T13:30:00.000Z",
+      "url": "https://lichess.org/tournament/ctWF7xip",
+      "results": [
+        {
+          "playerId": "endicraft",
+          "username": "endicraft",
+          "points": 0,
+          "rank": 1
+        },
+        {
+          "playerId": "kiliamchanaquilca",
+          "username": "kiliamCHANAQUILCA",
+          "points": 0,
+          "rank": 2
+        },
+        {
+          "playerId": "locomooooootion22",
+          "username": "Locomooooootion22",
+          "points": 0,
+          "rank": 3
         }
       ]
     }
