@@ -3,11 +3,11 @@ import "../globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://colegasdekike.vercel.app"),
-  title: "Colegas de Kike — Classement",
+  title: "Lichess Team Leaderboard",
   description: "Classement des points des tournois de Colegas de Kike sur Lichess.",
   alternates: { canonical: "/fr", languages: { es: "/es", en: "/", fr: "/fr" } },
   openGraph: {
-    title: "Colegas de Kike — Classement",
+    title: "Lichess Team Leaderboard",
     description: "Les joueurs qui marquent le plus de points cette semaine et depuis le début.",
     type: "website",
   },

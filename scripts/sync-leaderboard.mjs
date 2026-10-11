@@ -20,7 +20,7 @@ async function fetchText(url, accept = "application/x-ndjson, application/json",
     const response = await fetch(url, {
       headers: {
         Accept: accept,
-        "User-Agent": "colegas-de-kike-leaderboard/1.0",
+      "User-Agent": "lichess-team-leaderboard/1.0",
       },
       signal: AbortSignal.timeout(timeoutMs),
     });

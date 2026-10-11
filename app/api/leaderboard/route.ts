@@ -3,7 +3,7 @@ import { rankPlayers } from "../../../lib/leaderboard.mjs";
 
 export const runtime = "nodejs";
 
-const leaderboardUrl = "https://raw.githubusercontent.com/zetachess/Colegasdekike/leaderboard-data/data/leaderboard.json";
+const leaderboardUrl = "https://raw.githubusercontent.com/zetachess/Lichess-Team-Leaderboard/leaderboard-data/data/leaderboard.json";
 
 type TournamentResult = {
   playerId: string;

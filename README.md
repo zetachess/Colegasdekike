@@ -1,4 +1,4 @@
-# ♟️ Colegas de Kike Leaderboard
+# ♟️ Lichess Team Leaderboard
 
 ### Automated rankings for Lichess Team Battles
 
@@ -8,7 +8,7 @@ Originally built for **[Colegas de Kike](https://lichess.org/team/colegas-de-kik
 
 [**View the live leaderboard →**](https://colegasdekike.vercel.app/)
 
-[![Leaderboard sync](https://github.com/zetachess/Colegasdekike/actions/workflows/sync-leaderboard.yml/badge.svg)](https://github.com/zetachess/Colegasdekike/actions/workflows/sync-leaderboard.yml)
+[![Leaderboard sync](https://github.com/zetachess/Lichess-Team-Leaderboard/actions/workflows/sync-leaderboard.yml/badge.svg)](https://github.com/zetachess/Lichess-Team-Leaderboard/actions/workflows/sync-leaderboard.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=next.js)](https://nextjs.org/)
 [![Lichess](https://img.shields.io/badge/data-Lichess-000000?logo=lichess&logoColor=white)](https://lichess.org/)
 [![Deploy with Vercel](https://img.shields.io/badge/deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
@@ -64,8 +64,8 @@ Interface copy is maintained in [`lib/translations.ts`](lib/translations.ts). Pl
 You need Node.js 20.9 or newer and npm.
 
 ```bash
-git clone https://github.com/zetachess/Colegasdekike.git
-cd Colegasdekike
+git clone https://github.com/zetachess/Lichess-Team-Leaderboard.git
+cd Lichess-Team-Leaderboard
 npm install
 npm run dev
 ```
