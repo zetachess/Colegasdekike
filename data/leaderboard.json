@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-13T03:54:45.187Z",
+  "updatedAt": "2026-10-13T11:36:28.334Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76550,6 +76550,52 @@
           "username": "Locomooooootion22",
           "points": 0,
           "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "arena:UZn8aX4d",
+      "lichessId": "UZn8aX4d",
+      "type": "arena",
+      "name": "GP Chess Night Team Battle",
+      "startAt": "2026-10-12T16:30:00.000Z",
+      "url": "https://lichess.org/tournament/UZn8aX4d",
+      "results": [
+        {
+          "playerId": "eloyoff34",
+          "username": "eloyoff34",
+          "points": 16,
+          "rank": 1
+        },
+        {
+          "playerId": "lukskordoba",
+          "username": "lukskordoba",
+          "points": 8,
+          "rank": 2
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 4,
+          "rank": 3
+        },
+        {
+          "playerId": "invalid94",
+          "username": "invalid94",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 0,
+          "rank": 6
         }
       ]
     }
