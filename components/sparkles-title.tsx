@@ -16,7 +16,7 @@ const sparkles = [
 export default function SparklesTitle() {
   return (
     <h1 className="sparkles-title">
-      <span className="sparkles-title__text">Lichess Team Leaderboard</span>
+      <span className="sparkles-title__text">🏆 Colegas de Kike</span>
       <span className="sparkles-title__effects" aria-hidden="true">
         {sparkles.map((sparkle, index) => (
           <span
