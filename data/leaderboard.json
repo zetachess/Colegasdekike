@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-13T18:31:01.961Z",
+  "updatedAt": "2026-10-13T19:16:54.745Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76624,6 +76624,58 @@
           "username": "ajedrezconzeta",
           "points": 0,
           "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "arena:6lyGpKOb",
+      "lichessId": "6lyGpKOb",
+      "type": "arena",
+      "name": "LMAO Day 425 Team Battle",
+      "startAt": "2026-10-13T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/6lyGpKOb",
+      "results": [
+        {
+          "playerId": "cuerosky",
+          "username": "cuerosky",
+          "points": 63,
+          "rank": 1
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 16,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 3,
+          "rank": 3
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "jorgefg",
+          "username": "JorgeFG",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 2,
+          "rank": 6
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 0,
+          "rank": 7
         }
       ]
     },
