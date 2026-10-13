@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-13T13:15:45.778Z",
+  "updatedAt": "2026-10-13T18:31:01.961Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76596,6 +76596,56 @@
           "username": "dolmax",
           "points": 0,
           "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "arena:9ad0pQVl",
+      "lichessId": "9ad0pQVl",
+      "type": "arena",
+      "name": "GP Chess Day Team Battle",
+      "startAt": "2026-10-13T04:30:00.000Z",
+      "url": "https://lichess.org/tournament/9ad0pQVl",
+      "results": [
+        {
+          "playerId": "abraracourcix2",
+          "username": "abraracourcix2",
+          "points": 12,
+          "rank": 1
+        },
+        {
+          "playerId": "herberto0321",
+          "username": "HERBERTO0321",
+          "points": 4,
+          "rank": 2
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 3
+        }
+      ]
+    },
+    {
+      "id": "arena:tND63SGV",
+      "lichessId": "tND63SGV",
+      "type": "arena",
+      "name": "628th ULTRAbullet Team Battle",
+      "startAt": "2026-10-13T14:00:00.000Z",
+      "url": "https://lichess.org/tournament/tND63SGV",
+      "results": [
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 58,
+          "rank": 1
+        },
+        {
+          "playerId": "pedroluciap",
+          "username": "PedroLuciaP",
+          "points": 42,
+          "rank": 2
         }
       ]
     }
