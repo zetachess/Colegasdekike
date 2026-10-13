@@ -103,8 +103,8 @@ function TrophyPodium({ players, language }: { players: Player[]; language: Lang
 function PeriodTabs({ value, onChange, language }: { value: Period; onChange: (period: Period) => void; language: Language }) {
   const t = translations[language];
   const periods: { value: Period; label: string }[] = [
-    { value: "week", label: t.weeklyTop },
     { value: "all", label: t.allTime },
+    { value: "week", label: t.weeklyTop },
   ];
   return (
     <div className="period-switch" role="tablist" aria-label={t.rankingPeriod}>
@@ -208,7 +208,7 @@ export default function Leaderboard({ language }: { language: Language }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [period, setPeriod] = useState<Period>("week");
+  const [period, setPeriod] = useState<Period>("all");
   const searchRef = useRef<HTMLInputElement>(null);
 
   const loadBoard = useCallback(async (initial = false) => {
