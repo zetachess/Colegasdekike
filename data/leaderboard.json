@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-14T12:56:50.104Z",
+  "updatedAt": "2026-10-14T17:54:29.623Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76790,6 +76790,88 @@
           "username": "sutucale",
           "points": 0,
           "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "arena:vYIrLlMj",
+      "lichessId": "vYIrLlMj",
+      "type": "arena",
+      "name": "GP Chess Day Team Battle",
+      "startAt": "2026-10-14T04:30:00.000Z",
+      "url": "https://lichess.org/tournament/vYIrLlMj",
+      "results": [
+        {
+          "playerId": "congoman",
+          "username": "Congoman",
+          "points": 116,
+          "rank": 1
+        },
+        {
+          "playerId": "uhary",
+          "username": "Uhary",
+          "points": 65,
+          "rank": 2
+        },
+        {
+          "playerId": "benonionekenobi",
+          "username": "BenoniOneKenobi",
+          "points": 52,
+          "rank": 3
+        },
+        {
+          "playerId": "rafachess1977",
+          "username": "rafachess1977",
+          "points": 21,
+          "rank": 4
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 17,
+          "rank": 5
+        },
+        {
+          "playerId": "fanradu77",
+          "username": "fanradu77",
+          "points": 13,
+          "rank": 6
+        },
+        {
+          "playerId": "pravia1972",
+          "username": "pravia1972",
+          "points": 4,
+          "rank": 7
+        },
+        {
+          "playerId": "djesto",
+          "username": "djesto",
+          "points": 3,
+          "rank": 8
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 2,
+          "rank": 9
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 0,
+          "rank": 10
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 11
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 0,
+          "rank": 12
         }
       ]
     }
