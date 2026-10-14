@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-14T17:54:29.623Z",
+  "updatedAt": "2026-10-14T21:29:37.062Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76872,6 +76872,94 @@
           "username": "Thorpon66",
           "points": 0,
           "rank": 12
+        }
+      ]
+    },
+    {
+      "id": "arena:SJTTqX9v",
+      "lichessId": "SJTTqX9v",
+      "type": "arena",
+      "name": "LMAO Day 426 Team Battle",
+      "startAt": "2026-10-14T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/SJTTqX9v",
+      "results": [
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 36,
+          "rank": 1
+        },
+        {
+          "playerId": "jmag",
+          "username": "jmag",
+          "points": 32,
+          "rank": 2
+        },
+        {
+          "playerId": "elnylons",
+          "username": "ElNylons",
+          "points": 19,
+          "rank": 3
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 15,
+          "rank": 4
+        },
+        {
+          "playerId": "rafachess1977",
+          "username": "rafachess1977",
+          "points": 13,
+          "rank": 5
+        },
+        {
+          "playerId": "hasanalishah",
+          "username": "Hasanalishah",
+          "points": 8,
+          "rank": 6
+        },
+        {
+          "playerId": "t_ganzhin_mikhail",
+          "username": "T_Ganzhin_Mikhail",
+          "points": 6,
+          "rank": 7
+        },
+        {
+          "playerId": "kasparicy",
+          "username": "kasparicy",
+          "points": 6,
+          "rank": 8
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 3,
+          "rank": 9
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 2,
+          "rank": 10
+        },
+        {
+          "playerId": "az1512",
+          "username": "AZ1512",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "pravia1972",
+          "username": "pravia1972",
+          "points": 2,
+          "rank": 12
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 0,
+          "rank": 13
         }
       ]
     }
