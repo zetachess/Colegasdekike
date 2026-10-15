@@ -40,7 +40,6 @@ type BoardData = {
     biggestTournamentPerformance: TournamentHighlight | null;
     mostConsistentPlayer: PlayerInsight | null;
     mostIntenseTournament: TournamentHighlight | null;
-    mostParticipantsTournament: TournamentHighlight | null;
   };
 };
 
@@ -64,7 +63,7 @@ const EMPTY_BOARD: BoardData = {
   weekTournamentCount: 0,
   totalPoints: 0,
   weekStart: null,
-  highlights: { biggestTournamentPerformance: null, mostConsistentPlayer: null, mostIntenseTournament: null, mostParticipantsTournament: null },
+  highlights: { biggestTournamentPerformance: null, mostConsistentPlayer: null, mostIntenseTournament: null },
 };
 
 function formatPoints(points: number, language: Language) {
@@ -232,10 +231,9 @@ function Records({ highlights, language }: { highlights: BoardData["highlights"]
     { label: t.singleTournamentRecord, value: record?.winner ? `${formatPoints(record.winner.points, language)} ${t.points}` : t.noInsights, detail: record?.winner ? record.winner.username : "", meta: record?.name ?? "" },
     { label: t.consistencyKing, value: highlights.mostConsistentPlayer ? `${highlights.mostConsistentPlayer.tournaments} ${t.tournament(highlights.mostConsistentPlayer.tournaments)}` : t.noInsights, detail: highlights.mostConsistentPlayer?.username ?? "", meta: t.mostTournamentsPlayed },
     { label: t.mostIntense, value: highlights.mostIntenseTournament ? `${formatPoints(highlights.mostIntenseTournament.totalPoints, language)} ${t.points}` : t.noInsights, detail: highlights.mostIntenseTournament?.name ?? "", meta: t.teamTotal },
-    { label: t.mostParticipants, value: highlights.mostParticipantsTournament ? `${highlights.mostParticipantsTournament.participants} ${t.players(highlights.mostParticipantsTournament.participants)}` : t.noInsights, detail: highlights.mostParticipantsTournament?.name ?? "", meta: t.teamAttendance },
   ];
   return (
-    <section className="records-section records-section--four" aria-label={t.records}>
+    <section className="records-section records-section--three" aria-label={t.records}>
       {cards.map((card, index) => <article className={`record-card record-card--${index + 1}`} key={card.label}>
         <div className="record-card__top"><span className="record-icon"><Trophy size={17} aria-hidden="true" /></span><span>{card.label}</span></div>
         <strong className="record-points">{card.value}</strong>

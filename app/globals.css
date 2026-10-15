@@ -74,7 +74,7 @@ a { color: inherit; }
 .stat-label { color: var(--muted); font-size: 12px; font-weight: 600; }
 
 .records-section { display: grid; grid-template-columns: minmax(250px, .75fr) minmax(0, 1.25fr); gap: 14px; margin-top: 14px; }
-.records-section--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.records-section--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .record-card, .recent-card, .insight-card { border: 1px solid var(--line); background: rgba(19, 28, 36, .9); box-shadow: 0 18px 42px rgba(0,0,0,.16); }
 .record-card { min-height: 196px; display: flex; flex-direction: column; justify-content: center; padding: 20px; border-radius: 14px; background: radial-gradient(circle at 90% 0%, rgba(240,201,108,.15), transparent 58%), rgba(27, 38, 46, .94); }
 .record-card__top { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
@@ -201,7 +201,7 @@ a { color: inherit; }
   .dashboard-title h1 { font-size: 39px; }
   .stat-card { min-height: 104px; }
   .single-ranking { margin-top: 20px; }
-  .records-section, .records-section--four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .records-section, .records-section--three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .insights-grid { grid-template-columns: 1fr; }
   .player-search { align-items: stretch; flex-direction: column; gap: 7px; }
   .search-field { width: 100%; }
@@ -228,7 +228,7 @@ a { color: inherit; }
   .dashboard-title h1 { font-size: 35px; }
   .week-range { padding-top: 0; font-size: 10px; text-align: left; }
   .stats-grid { gap: 7px; }
-  .records-section, .records-section--four { grid-template-columns: 1fr; }
+  .records-section, .records-section--three { grid-template-columns: 1fr; }
   .record-card, .recent-card { min-height: 180px; padding: 18px; }
   .record-points { font-size: 42px; }
   .recent-card__heading h3 { font-size: 20px; }
