@@ -67,7 +67,7 @@ export const translations = {
     lastEight: "últimos 8",
     consistencyKing: "Rey de la constancia",
     mostTournamentsPlayed: "Más torneos jugados",
-    mostIntense: "Torneo más intenso",
+    mostIntense: "Torneo con más puntos",
     teamTotal: "Puntos sumados por el equipo",
   },
   en: {
