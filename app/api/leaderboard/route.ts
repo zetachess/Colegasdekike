@@ -90,7 +90,6 @@ export async function GET() {
       highlights: {
         biggestTournamentPerformance,
         mostConsistentPlayer: [...playerStatsList].sort((a, b) => b.tournaments - a.tournaments || b.points - a.points)[0] ?? null,
-        mostIntenseTournament: [...tournamentHighlights].sort((a, b) => b.totalPoints - a.totalPoints)[0] ?? null,
       },
     });
     response.headers.set("Cache-Control", "no-store");

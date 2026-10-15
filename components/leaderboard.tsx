@@ -39,7 +39,6 @@ type BoardData = {
   highlights: {
     biggestTournamentPerformance: TournamentHighlight | null;
     mostConsistentPlayer: PlayerInsight | null;
-    mostIntenseTournament: TournamentHighlight | null;
   };
 };
 
@@ -63,7 +62,7 @@ const EMPTY_BOARD: BoardData = {
   weekTournamentCount: 0,
   totalPoints: 0,
   weekStart: null,
-  highlights: { biggestTournamentPerformance: null, mostConsistentPlayer: null, mostIntenseTournament: null },
+  highlights: { biggestTournamentPerformance: null, mostConsistentPlayer: null },
 };
 
 function formatPoints(points: number, language: Language) {
@@ -230,10 +229,9 @@ function Records({ highlights, language }: { highlights: BoardData["highlights"]
   const cards = [
     { label: t.singleTournamentRecord, value: record?.winner ? `${formatPoints(record.winner.points, language)} ${t.points}` : t.noInsights, detail: record?.winner ? record.winner.username : "", detailHref: record?.winner ? profileUrl(record.winner.username) : undefined, meta: record?.name ?? "", metaHref: record?.url },
     { label: t.consistencyKing, value: highlights.mostConsistentPlayer ? `${highlights.mostConsistentPlayer.tournaments} ${t.tournament(highlights.mostConsistentPlayer.tournaments)}` : t.noInsights, detail: highlights.mostConsistentPlayer?.username ?? "", detailHref: highlights.mostConsistentPlayer ? profileUrl(highlights.mostConsistentPlayer.username) : undefined, meta: t.mostTournamentsPlayed },
-    { label: t.mostIntense, value: highlights.mostIntenseTournament ? `${formatPoints(highlights.mostIntenseTournament.totalPoints, language)} ${t.points}` : t.noInsights, detail: highlights.mostIntenseTournament?.name ?? "", detailHref: highlights.mostIntenseTournament?.url, meta: t.teamTotal },
   ];
   return (
-    <section className="records-section records-section--three" aria-label={t.records}>
+    <section className="records-section records-section--two" aria-label={t.records}>
       {cards.map((card, index) => <article className={`record-card record-card--${index + 1}`} key={card.label}>
         <div className="record-card__top"><span className="record-icon"><Trophy size={17} aria-hidden="true" /></span><span>{card.label}</span></div>
         <strong className="record-points">{card.value}</strong>

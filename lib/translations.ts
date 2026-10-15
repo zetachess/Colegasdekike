@@ -67,8 +67,6 @@ export const translations = {
     lastEight: "últimos 8",
     consistencyKing: "Rey de la constancia",
     mostTournamentsPlayed: "Más torneos jugados",
-    mostIntense: "Torneo con más puntos",
-    teamTotal: "Puntos sumados por el equipo",
   },
   en: {
     languageLabel: "Language",
@@ -130,8 +128,6 @@ export const translations = {
     lastEight: "last 8",
     consistencyKing: "Consistency king",
     mostTournamentsPlayed: "Most tournaments played",
-    mostIntense: "Most intense tournament",
-    teamTotal: "Team points combined",
   },
   fr: {
     languageLabel: "Langue",
@@ -193,7 +189,5 @@ export const translations = {
     lastEight: "8 derniers",
     consistencyKing: "Roi de la régularité",
     mostTournamentsPlayed: "Plus de tournois joués",
-    mostIntense: "Tournoi le plus intense",
-    teamTotal: "Points cumulés de l’équipe",
   },
 } as const;
