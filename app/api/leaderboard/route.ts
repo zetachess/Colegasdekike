@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { rankPlayers } from "../../../lib/leaderboard.mjs";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
 
 const leaderboardUrl = "https://raw.githubusercontent.com/zetachess/Lichess-Team-Leaderboard/leaderboard-data/data/leaderboard.json";
 
@@ -30,7 +31,7 @@ type Dataset = {
 };
 
 async function loadDataset(): Promise<Dataset> {
-  const response = await fetch(leaderboardUrl, { cache: "no-store" });
+  const response = await fetch(leaderboardUrl + "?v=" + Date.now(), { cache: "no-store" });
   if (!response.ok) throw new Error(`No se pudo leer el archivo de puntos (${response.status}).`);
   const dataset = (await response.json()) as Dataset;
   if (dataset.team !== "colegas-de-kike" || !Array.isArray(dataset.tournaments)) {
