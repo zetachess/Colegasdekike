@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-15T05:46:37.038Z",
+  "updatedAt": "2026-10-15T09:16:44.176Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -77018,6 +77018,46 @@
           "username": "ajedrezconzeta",
           "points": 0,
           "rank": 8
+        }
+      ]
+    },
+    {
+      "id": "arena:YFgUBwNs",
+      "lichessId": "YFgUBwNs",
+      "type": "arena",
+      "name": "LMAO Night 426 Team Battle",
+      "startAt": "2026-10-14T19:00:00.000Z",
+      "url": "https://lichess.org/tournament/YFgUBwNs",
+      "results": [
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 30,
+          "rank": 1
+        },
+        {
+          "playerId": "az1512",
+          "username": "AZ1512",
+          "points": 24,
+          "rank": 2
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 17,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 4
+        },
+        {
+          "playerId": "xadrez_de_praca",
+          "username": "xadrez_de_praca",
+          "points": 0,
+          "rank": 5
         }
       ]
     }
