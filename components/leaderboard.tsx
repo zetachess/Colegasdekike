@@ -228,17 +228,17 @@ function Records({ highlights, language }: { highlights: BoardData["highlights"]
   const t = translations[language];
   const record = highlights.biggestTournamentPerformance;
   const cards = [
-    { label: t.singleTournamentRecord, value: record?.winner ? `${formatPoints(record.winner.points, language)} ${t.points}` : t.noInsights, detail: record?.winner ? record.winner.username : "", meta: record?.name ?? "" },
-    { label: t.consistencyKing, value: highlights.mostConsistentPlayer ? `${highlights.mostConsistentPlayer.tournaments} ${t.tournament(highlights.mostConsistentPlayer.tournaments)}` : t.noInsights, detail: highlights.mostConsistentPlayer?.username ?? "", meta: t.mostTournamentsPlayed },
-    { label: t.mostIntense, value: highlights.mostIntenseTournament ? `${formatPoints(highlights.mostIntenseTournament.totalPoints, language)} ${t.points}` : t.noInsights, detail: highlights.mostIntenseTournament?.name ?? "", meta: t.teamTotal },
+    { label: t.singleTournamentRecord, value: record?.winner ? `${formatPoints(record.winner.points, language)} ${t.points}` : t.noInsights, detail: record?.winner ? record.winner.username : "", detailHref: record?.winner ? profileUrl(record.winner.username) : undefined, meta: record?.name ?? "", metaHref: record?.url },
+    { label: t.consistencyKing, value: highlights.mostConsistentPlayer ? `${highlights.mostConsistentPlayer.tournaments} ${t.tournament(highlights.mostConsistentPlayer.tournaments)}` : t.noInsights, detail: highlights.mostConsistentPlayer?.username ?? "", detailHref: highlights.mostConsistentPlayer ? profileUrl(highlights.mostConsistentPlayer.username) : undefined, meta: t.mostTournamentsPlayed },
+    { label: t.mostIntense, value: highlights.mostIntenseTournament ? `${formatPoints(highlights.mostIntenseTournament.totalPoints, language)} ${t.points}` : t.noInsights, detail: highlights.mostIntenseTournament?.name ?? "", detailHref: highlights.mostIntenseTournament?.url, meta: t.teamTotal },
   ];
   return (
     <section className="records-section records-section--three" aria-label={t.records}>
       {cards.map((card, index) => <article className={`record-card record-card--${index + 1}`} key={card.label}>
         <div className="record-card__top"><span className="record-icon"><Trophy size={17} aria-hidden="true" /></span><span>{card.label}</span></div>
         <strong className="record-points">{card.value}</strong>
-        {card.detail && <span className="record-player">{card.detail}</span>}
-        {card.meta && <span className="record-event">{card.meta}{record && index === 0 ? ` · ${shortDate(record.startAt, language)}` : ""}</span>}
+        {card.detail && (card.detailHref ? <a className="record-player" href={card.detailHref} target="_blank" rel="noreferrer">{card.detail} <ExternalLink size={13} aria-hidden="true" /></a> : <span className="record-player">{card.detail}</span>)}
+        {card.meta && (card.metaHref ? <a className="record-event" href={card.metaHref} target="_blank" rel="noreferrer">{card.meta}{record && index === 0 ? ` · ${shortDate(record.startAt, language)}` : ""}</a> : <span className="record-event">{card.meta}</span>)}
       </article>)}
     </section>
   );
