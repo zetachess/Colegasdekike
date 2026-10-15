@@ -34,7 +34,7 @@ export const translations = {
     loading: "Cargando puntos de los torneos…",
     loadingLabel: "Cargando clasificación",
     summary: "Resumen histórico",
-    countedTournaments: "🏆 Torneos contados",
+    countedTournaments: "🏆 Torneos jugados",
     totalPoints: "📈 Puntos sumados",
     playerRanking: "Clasificación de jugadores",
     searchLabel: "Buscar jugador por nombre",
