@@ -6,7 +6,10 @@ import { upsertTournament } from "../lib/leaderboard.mjs";
 
 export async function syncLeaderboard({
   teamId = process.env.LICHESS_TEAM_ID || "colegas-de-kike",
-  tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 1_000),
+  // Lichess returns the newest tournaments first. Keep this comfortably above
+  // the current history so the leaderboard can backfill older team battles
+  // instead of silently stopping at the first 1,000 events.
+  tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 10_000),
   outputPath = process.env.LEADERBOARD_DATA_PATH || path.resolve("data/leaderboard.json"),
   client = createLichessClient({ teamId, tournamentHistoryLimit }),
   read = readDataset,
