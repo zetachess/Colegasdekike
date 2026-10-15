@@ -11,7 +11,7 @@ export async function syncLeaderboard({
   // silently stopping at the first 1,000 events. The Lichess team endpoint
   // returns tournaments newest-first and does not expose a cursor, so this
   // needs to cover the full period we want to display.
-  tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 8_000),
+  tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 12_000),
   // Fetch standings concurrently, but keep a modest limit so we do not
   // overload Lichess or trigger its rate limiter during the backfill.
   resultConcurrency = Number(process.env.LICHESS_RESULT_CONCURRENCY || 12),
