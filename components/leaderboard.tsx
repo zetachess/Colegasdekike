@@ -10,6 +10,7 @@ import {
   RefreshCw,
   Search,
   Swords,
+  Trophy,
   X,
 } from "lucide-react";
 import NumberTicker from "./number-ticker";
@@ -35,6 +36,23 @@ type BoardData = {
   weekTournamentCount: number;
   totalPoints: number;
   weekStart: string | null;
+  highlights: {
+    biggestTournamentPerformance: TournamentHighlight | null;
+    mostConsistentPlayer: PlayerInsight | null;
+    mostIntenseTournament: TournamentHighlight | null;
+    mostParticipantsTournament: TournamentHighlight | null;
+  };
+};
+
+type PlayerInsight = Player & { rank?: number };
+type TournamentHighlight = {
+  id: string;
+  name: string;
+  startAt: string;
+  url: string;
+  winner: { playerId: string; username: string; points: number; rank: number | null } | null;
+  participants: number;
+  totalPoints: number;
 };
 
 const EMPTY_BOARD: BoardData = {
@@ -46,6 +64,7 @@ const EMPTY_BOARD: BoardData = {
   weekTournamentCount: 0,
   totalPoints: 0,
   weekStart: null,
+  highlights: { biggestTournamentPerformance: null, mostConsistentPlayer: null, mostIntenseTournament: null, mostParticipantsTournament: null },
 };
 
 function formatPoints(points: number, language: Language) {
@@ -70,6 +89,10 @@ function formatWeekRange(weekStart: string | null, language: Language) {
   end.setUTCDate(end.getUTCDate() + 6);
   const format = new Intl.DateTimeFormat(locales[language], { timeZone: "Europe/Madrid", day: "numeric", month: "short" });
   return `${format.format(start)} – ${format.format(end)} · ${translations[language].madrid}`;
+}
+
+function shortDate(value: string, language: Language) {
+  return new Intl.DateTimeFormat(locales[language], { timeZone: "Europe/Madrid", day: "numeric", month: "short" }).format(new Date(value));
 }
 
 function profileUrl(username: string) {
@@ -202,13 +225,34 @@ function PlayerTable({
   );
 }
 
+function Records({ highlights, language }: { highlights: BoardData["highlights"]; language: Language }) {
+  const t = translations[language];
+  const record = highlights.biggestTournamentPerformance;
+  const cards = [
+    { label: t.singleTournamentRecord, value: record?.winner ? `${formatPoints(record.winner.points, language)} ${t.points}` : t.noInsights, detail: record?.winner ? record.winner.username : "", meta: record?.name ?? "" },
+    { label: t.consistencyKing, value: highlights.mostConsistentPlayer ? `${highlights.mostConsistentPlayer.tournaments} ${t.tournament(highlights.mostConsistentPlayer.tournaments)}` : t.noInsights, detail: highlights.mostConsistentPlayer?.username ?? "", meta: t.mostTournamentsPlayed },
+    { label: t.mostIntense, value: highlights.mostIntenseTournament ? `${formatPoints(highlights.mostIntenseTournament.totalPoints, language)} ${t.points}` : t.noInsights, detail: highlights.mostIntenseTournament?.name ?? "", meta: t.teamTotal },
+    { label: t.mostParticipants, value: highlights.mostParticipantsTournament ? `${highlights.mostParticipantsTournament.participants} ${t.players(highlights.mostParticipantsTournament.participants)}` : t.noInsights, detail: highlights.mostParticipantsTournament?.name ?? "", meta: t.teamAttendance },
+  ];
+  return (
+    <section className="records-section records-section--four" aria-label={t.records}>
+      {cards.map((card, index) => <article className={`record-card record-card--${index + 1}`} key={card.label}>
+        <div className="record-card__top"><span className="record-icon"><Trophy size={17} aria-hidden="true" /></span><span>{card.label}</span></div>
+        <strong className="record-points">{card.value}</strong>
+        {card.detail && <span className="record-player">{card.detail}</span>}
+        {card.meta && <span className="record-event">{card.meta}{record && index === 0 ? ` · ${shortDate(record.startAt, language)}` : ""}</span>}
+      </article>)}
+    </section>
+  );
+}
+
 export default function Leaderboard({ language }: { language: Language }) {
   const t = translations[language];
   const [data, setData] = useState<BoardData>(EMPTY_BOARD);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [period, setPeriod] = useState<Period>("all");
+  const [period, setPeriod] = useState<Period>("week");
   const searchRef = useRef<HTMLInputElement>(null);
 
   const loadBoard = useCallback(async (initial = false) => {
@@ -305,6 +349,7 @@ export default function Leaderboard({ language }: { language: Language }) {
             ))}
           </section>
 
+          <Records highlights={data.highlights} language={language} />
           <section className="single-ranking" aria-label={t.playerRanking}>
             <PeriodTabs value={period} onChange={setPeriod} language={language} />
             <div id="ranking-panel" role="tabpanel" aria-labelledby={`tab-${period}`}>

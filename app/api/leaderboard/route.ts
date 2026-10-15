@@ -48,6 +48,32 @@ export async function GET() {
     const results = dataset.tournaments
       .filter((tournament) => tournament.type === "arena")
       .flatMap((tournament) => tournament.results);
+    const arenaTournaments = dataset.tournaments.filter((tournament) => tournament.type === "arena");
+    const playerStats = new Map<string, { playerId: string; username: string; points: number; tournaments: number }>();
+    const tournamentHighlights = arenaTournaments.map((tournament) => {
+      const sorted = [...tournament.results].sort((a, b) => b.points - a.points || (a.rank ?? Infinity) - (b.rank ?? Infinity));
+      const winner = sorted[0];
+      for (const result of tournament.results) {
+        const current = playerStats.get(result.playerId) ?? { playerId: result.playerId, username: result.username, points: 0, tournaments: 0 };
+        current.username = result.username || current.username;
+        current.points += result.points;
+        current.tournaments += 1;
+        playerStats.set(result.playerId, current);
+      }
+      return {
+        id: tournament.id,
+        name: tournament.name,
+        startAt: tournament.startAt,
+        url: tournament.url,
+        winner: winner ? { playerId: winner.playerId, username: winner.username, points: winner.points, rank: winner.rank } : null,
+        participants: tournament.results.length,
+        totalPoints: tournament.results.reduce((sum, result) => sum + result.points, 0),
+      };
+    }).sort((a, b) => b.startAt.localeCompare(a.startAt));
+    const playerStatsList = [...playerStats.values()];
+    const biggestTournamentPerformance = tournamentHighlights
+      .filter((tournament) => tournament.winner)
+      .sort((a, b) => (b.winner?.points ?? 0) - (a.winner?.points ?? 0))[0] ?? null;
 
     const response = NextResponse.json({
       allTime: allTime.entries,
@@ -60,6 +86,12 @@ export async function GET() {
       totalPoints: results.reduce((sum, result) => sum + result.points, 0),
       unavailableTournamentCount: dataset.unavailableTournamentIds?.length ?? 0,
       weekStart: thisWeek.weekStart,
+      highlights: {
+        biggestTournamentPerformance,
+        mostConsistentPlayer: [...playerStatsList].sort((a, b) => b.tournaments - a.tournaments || b.points - a.points)[0] ?? null,
+        mostIntenseTournament: [...tournamentHighlights].sort((a, b) => b.totalPoints - a.totalPoints)[0] ?? null,
+        mostParticipantsTournament: [...tournamentHighlights].sort((a, b) => b.participants - a.participants || b.totalPoints - a.totalPoints)[0] ?? null,
+      },
     });
     response.headers.set("Cache-Control", "no-store");
     return response;
