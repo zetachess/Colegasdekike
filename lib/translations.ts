@@ -69,8 +69,6 @@ export const translations = {
     mostTournamentsPlayed: "Más torneos jugados",
     mostIntense: "Torneo más intenso",
     teamTotal: "Puntos sumados por el equipo",
-    mostParticipants: "Torneo multitudinario",
-    teamAttendance: "Participación del equipo",
   },
   en: {
     languageLabel: "Language",
@@ -134,8 +132,6 @@ export const translations = {
     mostTournamentsPlayed: "Most tournaments played",
     mostIntense: "Most intense tournament",
     teamTotal: "Team points combined",
-    mostParticipants: "Biggest field",
-    teamAttendance: "Team attendance",
   },
   fr: {
     languageLabel: "Langue",
@@ -199,7 +195,5 @@ export const translations = {
     mostTournamentsPlayed: "Plus de tournois joués",
     mostIntense: "Tournoi le plus intense",
     teamTotal: "Points cumulés de l’équipe",
-    mostParticipants: "Tournoi le plus fréquenté",
-    teamAttendance: "Participation de l’équipe",
   },
 } as const;
