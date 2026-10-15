@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-15T14:19:24.885Z",
+  "updatedAt": "2026-10-15T21:38:04.238Z",
   "coverageFrom": "2020-04-12T10:30:00.000Z",
   "tournaments": [
     {
@@ -809966,6 +809966,158 @@
       ]
     },
     {
+      "id": "arena:ogHZTn00",
+      "lichessId": "ogHZTn00",
+      "type": "arena",
+      "name": "GP Chess Day Team Battle",
+      "startAt": "2026-10-15T04:30:00.000Z",
+      "url": "https://lichess.org/tournament/ogHZTn00",
+      "results": [
+        {
+          "playerId": "congoman",
+          "username": "Congoman",
+          "points": 104,
+          "rank": 1
+        },
+        {
+          "playerId": "draten",
+          "username": "draten",
+          "points": 56,
+          "rank": 2
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 13,
+          "rank": 3
+        },
+        {
+          "playerId": "vladimirech",
+          "username": "Vladimirech",
+          "points": 11,
+          "rank": 4
+        },
+        {
+          "playerId": "trueno666",
+          "username": "Trueno666",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "koldo666",
+          "username": "KOLDO666",
+          "points": 2,
+          "rank": 6
+        },
+        {
+          "playerId": "kratos82",
+          "username": "kratos82",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 8
+        },
+        {
+          "playerId": "invalid94",
+          "username": "invalid94",
+          "points": 0,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "id": "arena:XBOdBseL",
+      "lichessId": "XBOdBseL",
+      "type": "arena",
+      "name": "LMAO Day 427 Team Battle",
+      "startAt": "2026-10-15T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/XBOdBseL",
+      "results": [
+        {
+          "playerId": "toribiov",
+          "username": "toribiov",
+          "points": 80,
+          "rank": 1
+        },
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 32,
+          "rank": 2
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 32,
+          "rank": 3
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 24,
+          "rank": 4
+        },
+        {
+          "playerId": "bsanches",
+          "username": "BSanches",
+          "points": 10,
+          "rank": 5
+        },
+        {
+          "playerId": "jmag",
+          "username": "jmag",
+          "points": 10,
+          "rank": 6
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 4,
+          "rank": 7
+        },
+        {
+          "playerId": "sutucale",
+          "username": "sutucale",
+          "points": 3,
+          "rank": 8
+        },
+        {
+          "playerId": "orce78",
+          "username": "Orce78",
+          "points": 3,
+          "rank": 9
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 2,
+          "rank": 10
+        },
+        {
+          "playerId": "elnylons",
+          "username": "ElNylons",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 12
+        },
+        {
+          "playerId": "hasanalishah",
+          "username": "Hasanalishah",
+          "points": 0,
+          "rank": 13
+        }
+      ]
+    },
+    {
       "id": "arena:3njHAWln",
       "lichessId": "3njHAWln",
       "type": "arena",
@@ -809977,6 +810129,28 @@
           "playerId": "davidpfer",
           "username": "davidpfer",
           "points": 2,
+          "rank": 1
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "arena:2YRGel3X",
+      "lichessId": "2YRGel3X",
+      "type": "arena",
+      "name": "630th ULTRAbullet Team Battle",
+      "startAt": "2026-10-15T14:00:00.000Z",
+      "url": "https://lichess.org/tournament/2YRGel3X",
+      "results": [
+        {
+          "playerId": "pedroluciap",
+          "username": "PedroLuciaP",
+          "points": 12,
           "rank": 1
         },
         {
