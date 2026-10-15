@@ -7,9 +7,7 @@
     <br />
     <a href="https://colegasdekike.vercel.app/">View the live leaderboard</a>
     ·
-    <a href="https://github.com/zetachess/Lichess-Team-Leaderboard/issues">Report a problem</a>
-    ·
-    <a href="https://github.com/zetachess/Lichess-Team-Leaderboard/issues">Request an improvement</a>
+    <a href="https://github.com/zetachess/Lichess-Team-Leaderboard/issues">Report a problem or suggest an improvement</a>
   </p>
 
   <p>
@@ -20,195 +18,88 @@
   </p>
 </div>
 
-## Table of Contents
+## Contents
 
-- [About the Project](#about-the-project)
+- [About](#about)
 - [Features](#features)
-- [How It Works](#how-it-works)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Adapt It for Another Team](#adapt-it-for-another-team)
+- [How it works](#how-it-works)
 - [Languages](#languages)
-- [Data and Reliability](#data-and-reliability)
+- [Data and privacy](#data-and-privacy)
 - [Technology](#technology)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
 
-## About the Project
+## About
 
-Lichess Team Leaderboard turns a Lichess team's public tournament results into a polished leaderboard for a club, school, or online community.
+Lichess Team Leaderboard turns a Lichess team's public tournament results into a leaderboard for a club, school, or online community.
 
-The current deployment was built for [Colegas de Kike](https://lichess.org/team/colegas-de-kike). It calculates player points, highlights the podium, supports weekly and all-time views, and refreshes automatically without a database or personal Lichess token.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This deployment was built for [Colegas de Kike](https://lichess.org/team/colegas-de-kike). It tracks player points, highlights the podium, and shows weekly and all-time rankings.
 
 ## Features
 
-- **Weekly and all-time standings** with eligible players sorted by score.
-- **Dynamic podium** for the top three players in the selected period.
-- **Team-aware scoring** that excludes players representing opposing teams.
-- **Automatic synchronization** through GitHub Actions every 20 minutes.
-- **English, Spanish, and French interfaces** with localized dates and numbers.
-- **Player search** with responsive and keyboard-friendly controls.
-- **Database-free persistence** using JSON on the `leaderboard-data` branch.
-- **Public-data collection** with GitHub's built-in `GITHUB_TOKEN`; no personal Lichess token is required.
+- Weekly and all-time rankings.
+- Podium for the top three players.
+- Team-aware scoring that excludes players representing opposing teams.
+- Automatic results synchronization every 20 minutes.
+- English, Spanish, and French interfaces.
+- Responsive player search.
+- No separate database: leaderboard data is published as JSON.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## How It Works
+## How it works
 
 ```text
-Lichess team battles
-        │
-        ▼
-Scheduled GitHub Action
-        │
-        ▼
-Tournament collection and point validation
-        │
-        ▼
-Deduplicated data/leaderboard.json
-        │
-        ▼
-Next.js API and multilingual leaderboard
+Public Lichess tournament results
+              │
+              ▼
+     Scheduled GitHub Action
+              │
+              ▼
+   Validated leaderboard data
+              │
+              ▼
+      Live leaderboard on Vercel
 ```
 
-The synchronization job requests up to 1,000 Arena tournaments associated with the configured team. It imports completed events, reads the standings for the selected team, and deduplicates tournament and player records so repeated runs do not award points twice.
-
-The current scoring model excludes Swiss tournaments. Weekly standings follow the calendar week in the `Europe/Madrid` time zone and assign a tournament to the week in which it started.
-
-Production code runs from `main`. Generated leaderboard data lives on `leaderboard-data`, so routine score updates do not require a frontend deployment.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 20.9 or newer.
-- npm.
-- A public Lichess team with Arena tournament history.
-
-### Installation
-
-```bash
-git clone https://github.com/zetachess/Lichess-Team-Leaderboard.git
-cd Lichess-Team-Leaderboard
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-### Run the checks
-
-```bash
-npm run lint
-npm run typecheck
-npm run build
-npm test
-```
-
-### Run the collector manually
-
-```bash
-node scripts/sync-leaderboard.mjs
-```
-
-By default, the collector writes to `data/leaderboard.json`.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Configuration
-
-| Variable | Default | Purpose |
-| --- | --- | --- |
-| `LICHESS_TEAM_ID` | `colegas-de-kike` | Lichess team slug collected by the synchronizer |
-| `LICHESS_TOURNAMENT_LIMIT` | `1000` | Maximum number of Arena tournaments requested |
-| `LEADERBOARD_DATA_PATH` | `data/leaderboard.json` | Local output path for generated data |
-
-The scheduled workflow is defined in [`.github/workflows/sync-leaderboard.yml`](.github/workflows/sync-leaderboard.yml).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Adapt It for Another Team
-
-1. Fork the repository and enable **Settings → Actions → General → Workflow permissions → Read and write permissions**.
-2. Set `LICHESS_TEAM_ID` for the synchronization workflow or replace the collector's default team ID.
-3. Update the raw data URL and expected team ID in [`app/api/leaderboard/route.ts`](app/api/leaderboard/route.ts) so the deployed app reads your fork's `leaderboard-data` branch.
-4. Replace the team name, link, visual identity, and metadata in the interface.
-5. Run **Actions → Actualizar clasificación → Run workflow** once to create the initial data.
-6. Import the repository into [Vercel](https://vercel.com/) and configure the production deployment.
-
-The current API implementation expects the `leaderboard-data` branch to be publicly readable. No separate database is required.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The synchronizer collects completed Arena tournaments, checks the standings for the team, and avoids counting the same tournament or player result twice. Swiss tournaments are excluded. Weekly rankings use the `Europe/Madrid` time zone and the tournament's start date.
 
 ## Languages
 
 | Route | Language |
 | --- | --- |
-| `/` | English (default) |
-| `/en` | English compatibility route |
+| `/` | English |
+| `/en` | English |
 | `/es` | Spanish |
 | `/fr` | French |
 
-Interface copy is maintained in [`lib/translations.ts`](lib/translations.ts). Player names and scores remain unchanged when switching languages.
+## Data and privacy
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The leaderboard uses publicly available Lichess tournament results. Players do not need to provide passwords, access tokens, or private account information.
 
-## Data and Reliability
-
-The collector is intentionally conservative:
-
-- Imports only finished tournaments.
-- Stores each tournament and player result once.
-- Processes Lichess requests sequentially.
-- Waits and retries after an HTTP `429` rate-limit response.
-- Records unavailable historical standings instead of retrying forever.
-- Fails visibly if the source structure changes, avoiding silent attribution of incorrect points.
-
-All standings come from publicly accessible Lichess tournament data. Players do not need to provide passwords, access tokens, or private account information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+GitHub Actions saves updated scores using the repository's built-in workflow permissions. No personal Lichess credentials are needed.
 
 ## Technology
 
 | Technology | Role |
 | --- | --- |
-| Next.js 16 and React 19 | Web application and interface |
-| TypeScript | Typed frontend and API code |
-| GitHub Actions | Scheduled data synchronization |
-| GitHub | Source control and JSON persistence |
-| Vercel | Production hosting |
+| Next.js and React | Web application |
+| TypeScript | Application code |
+| GitHub Actions | Scheduled synchronization |
+| GitHub | Source control and leaderboard data |
+| Vercel | Hosting |
 | Lichess | Public tournament data |
 | Lucide React | Interface icons |
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Contributing
 
-Bug reports, translations, documentation improvements, and code contributions are welcome.
-
-Before opening a pull request:
-
-1. Create a focused branch.
-2. Explain the behavior or documentation change.
-3. Run the lint, typecheck, build, and test commands.
-4. Include screenshots for meaningful interface changes.
-5. Keep generated leaderboard data and source code changes clearly separated.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Bug reports, translations, documentation improvements, and code contributions are welcome. Please open an issue to report a problem or suggest an improvement.
 
 ## License
 
-No license has been added yet. Until a `LICENSE` file is included, the repository is publicly visible but no open-source license is granted.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+No license has been added yet. The repository is publicly visible, but reuse is not granted under an open-source license until a `LICENSE` file is added.
 
 ## Acknowledgments
 
-Built for **Colegas de Kike** with appreciation for [Lichess](https://lichess.org/), its public platform, and the communities that make online team chess possible.
+Built for **Colegas de Kike** with appreciation for [Lichess](https://lichess.org/) and the communities that make online team chess possible.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
