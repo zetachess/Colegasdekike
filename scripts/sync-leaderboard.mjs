@@ -8,9 +8,10 @@ export async function syncLeaderboard({
   teamId = process.env.LICHESS_TEAM_ID || "colegas-de-kike",
   // Lichess returns the newest tournaments first. Keep this above the current
   // history so the leaderboard can backfill older team battles instead of
-  // silently stopping at the first 1,000 events, without making the NDJSON
-  // response too large for a scheduled sync.
-  tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 2_000),
+  // silently stopping at the first 1,000 events. The Lichess team endpoint
+  // returns tournaments newest-first and does not expose a cursor, so this
+  // needs to cover the full period we want to display.
+  tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 5_000),
   outputPath = process.env.LEADERBOARD_DATA_PATH || path.resolve("data/leaderboard.json"),
   client = createLichessClient({ teamId, tournamentHistoryLimit }),
   read = readDataset,
