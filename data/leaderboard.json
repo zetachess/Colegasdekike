@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-15T04:27:00.346Z",
+  "updatedAt": "2026-10-15T05:28:26.726Z",
   "coverageFrom": "2025-02-16T19:01:00.000Z",
   "tournaments": [
     {
@@ -76960,6 +76960,64 @@
           "username": "sutucale",
           "points": 0,
           "rank": 13
+        }
+      ]
+    },
+    {
+      "id": "arena:vYAwX3m5",
+      "lichessId": "vYAwX3m5",
+      "type": "arena",
+      "name": "GP Chess Night Team Battle",
+      "startAt": "2026-10-14T16:30:00.000Z",
+      "url": "https://lichess.org/tournament/vYAwX3m5",
+      "results": [
+        {
+          "playerId": "toribiov",
+          "username": "toribiov",
+          "points": 35,
+          "rank": 1
+        },
+        {
+          "playerId": "az1512",
+          "username": "AZ1512",
+          "points": 16,
+          "rank": 2
+        },
+        {
+          "playerId": "rrirrautentico",
+          "username": "RRiRRautentico",
+          "points": 12,
+          "rank": 3
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 6,
+          "rank": 4
+        },
+        {
+          "playerId": "ldboutens",
+          "username": "LDBoutens",
+          "points": 3,
+          "rank": 5
+        },
+        {
+          "playerId": "congoman",
+          "username": "Congoman",
+          "points": 2,
+          "rank": 6
+        },
+        {
+          "playerId": "ronnyhernandez89",
+          "username": "Ronnyhernandez89",
+          "points": 2,
+          "rank": 7
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 8
         }
       ]
     }
