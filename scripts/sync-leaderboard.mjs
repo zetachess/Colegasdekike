@@ -12,6 +12,9 @@ export async function syncLeaderboard({
   // returns tournaments newest-first and does not expose a cursor, so this
   // needs to cover the full period we want to display.
   tournamentHistoryLimit = Number(process.env.LICHESS_TOURNAMENT_LIMIT || 5_000),
+  // Fetch standings concurrently, but keep a modest limit so we do not
+  // overload Lichess or trigger its rate limiter during the backfill.
+  resultConcurrency = Number(process.env.LICHESS_RESULT_CONCURRENCY || 12),
   outputPath = process.env.LEADERBOARD_DATA_PATH || path.resolve("data/leaderboard.json"),
   client = createLichessClient({ teamId, tournamentHistoryLimit }),
   read = readDataset,
@@ -21,6 +24,9 @@ export async function syncLeaderboard({
 } = {}) {
   if (!Number.isInteger(tournamentHistoryLimit) || tournamentHistoryLimit < 1) {
     throw new Error("LICHESS_TOURNAMENT_LIMIT must be a positive integer.");
+  }
+  if (!Number.isInteger(resultConcurrency) || resultConcurrency < 1) {
+    throw new Error("LICHESS_RESULT_CONCURRENCY must be a positive integer.");
   }
 
   const dataset = await read(outputPath, teamId);
@@ -47,6 +53,7 @@ export async function syncLeaderboard({
       continue;
     }
 
+    const candidates = [];
     for (const event of events) {
       const lichessId = event.id ?? event.tournament?.id;
       if (!lichessId || !isFinished(event)) continue;
@@ -61,34 +68,53 @@ export async function syncLeaderboard({
         continue;
       }
 
-      try {
+      candidates.push({ event, lichessId, compositeId, startAt });
+    }
+
+    for (let offset = 0; offset < candidates.length; offset += resultConcurrency) {
+      const batch = candidates.slice(offset, offset + resultConcurrency);
+      const imported = await Promise.allSettled(batch.map(async ({ event, lichessId, compositeId, startAt }) => {
         const results = await client.getTournamentResults(type, lichessId);
         const name = String(event.name ?? event.fullName ?? event.tournament?.name ?? "Torneo de Colegas de Kike");
-        upsertTournament(dataset, {
-          id: compositeId,
-          lichessId,
-          type,
-          name,
-          startAt,
-          url: "https://lichess.org/tournament/" + encodeURIComponent(lichessId),
-          results,
-        });
-        knownIds.add(compositeId);
-        await write(outputPath, dataset);
-        logger.log("Imported " + compositeId + ": " + results.length + " players.");
-      } catch (error) {
+        return { compositeId, lichessId, type, name, startAt, results };
+      }));
+
+      for (let index = 0; index < imported.length; index += 1) {
+        const outcome = imported[index];
+        const { compositeId } = batch[index];
+        if (outcome.status === "fulfilled") {
+          const importedTournament = outcome.value;
+          upsertTournament(dataset, {
+            id: importedTournament.compositeId,
+            lichessId: importedTournament.lichessId,
+            type: importedTournament.type,
+            name: importedTournament.name,
+            startAt: importedTournament.startAt,
+            url: "https://lichess.org/tournament/" + encodeURIComponent(importedTournament.lichessId),
+            results: importedTournament.results,
+          });
+          knownIds.add(compositeId);
+          logger.log("Imported " + compositeId + ": " + importedTournament.results.length + " players.");
+          continue;
+        }
+
+        const error = outcome.reason;
         if (error instanceof Error && error.message.includes("Lichess returned 404")) {
           // Some old team Arena listings outlive the team-specific standings page.
           // Record them once so scheduled syncs do not retry permanently missing data.
           dataset.unavailableTournamentIds.push(compositeId);
           knownIds.add(compositeId);
-          await write(outputPath, dataset);
           logger.warn("Historical results unavailable for " + compositeId + "; recorded as missing.");
         } else {
           failed = true;
           logger.error("Could not import " + compositeId + ":", error);
         }
       }
+
+      // Persist after each concurrent batch so a timeout resumes from the
+      // last completed batch instead of losing the entire backfill.
+      dataset.coverageFrom = dataset.tournaments[0]?.startAt ?? null;
+      await write(outputPath, dataset);
     }
   }
 
