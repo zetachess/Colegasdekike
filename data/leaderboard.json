@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-16T04:06:59.902Z",
+  "updatedAt": "2026-10-16T09:00:09.909Z",
   "coverageFrom": "2020-04-12T10:30:00.000Z",
   "tournaments": [
     {
@@ -810158,6 +810158,110 @@
           "username": "ajedrezconzeta",
           "points": 0,
           "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "arena:I1sdO8Pl",
+      "lichessId": "I1sdO8Pl",
+      "type": "arena",
+      "name": "GP Chess Night Team Battle",
+      "startAt": "2026-10-15T16:30:00.000Z",
+      "url": "https://lichess.org/tournament/I1sdO8Pl",
+      "results": [
+        {
+          "playerId": "rrirrautentico",
+          "username": "RRiRRautentico",
+          "points": 102,
+          "rank": 1
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 17,
+          "rank": 2
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 12,
+          "rank": 3
+        },
+        {
+          "playerId": "invalid94",
+          "username": "invalid94",
+          "points": 3,
+          "rank": 4
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "id": "arena:xPqCEDn8",
+      "lichessId": "xPqCEDn8",
+      "type": "arena",
+      "name": "LMAO Night 427 Team Battle",
+      "startAt": "2026-10-15T19:00:00.000Z",
+      "url": "https://lichess.org/tournament/xPqCEDn8",
+      "results": [
+        {
+          "playerId": "allesgehtzubruch",
+          "username": "allesgehtzubruch",
+          "points": 28,
+          "rank": 1
+        },
+        {
+          "playerId": "altpatzer",
+          "username": "Altpatzer",
+          "points": 27,
+          "rank": 2
+        },
+        {
+          "playerId": "dolmax",
+          "username": "dolmax",
+          "points": 17,
+          "rank": 3
+        },
+        {
+          "playerId": "pravia1972",
+          "username": "pravia1972",
+          "points": 2,
+          "rank": 4
+        },
+        {
+          "playerId": "elnylons",
+          "username": "ElNylons",
+          "points": 2,
+          "rank": 5
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 6
+        },
+        {
+          "playerId": "ronnyhernandez89",
+          "username": "Ronnyhernandez89",
+          "points": 0,
+          "rank": 7
+        },
+        {
+          "playerId": "hacker_ying_yang",
+          "username": "Hacker_Ying_Yang",
+          "points": 0,
+          "rank": 8
         }
       ]
     }
