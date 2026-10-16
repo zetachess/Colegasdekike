@@ -1,6 +1,6 @@
 {
   "team": "colegas-de-kike",
-  "updatedAt": "2026-10-16T18:00:33.082Z",
+  "updatedAt": "2026-10-16T20:53:30.612Z",
   "coverageFrom": "2020-04-12T10:30:00.000Z",
   "tournaments": [
     {
@@ -810266,6 +810266,112 @@
       ]
     },
     {
+      "id": "arena:pPUWgUxj",
+      "lichessId": "pPUWgUxj",
+      "type": "arena",
+      "name": "LMAO Day 428 Team Battle",
+      "startAt": "2026-10-16T07:00:00.000Z",
+      "url": "https://lichess.org/tournament/pPUWgUxj",
+      "results": [
+        {
+          "playerId": "az1512",
+          "username": "AZ1512",
+          "points": 58,
+          "rank": 1
+        },
+        {
+          "playerId": "jmag",
+          "username": "jmag",
+          "points": 34,
+          "rank": 2
+        },
+        {
+          "playerId": "luso1",
+          "username": "Luso1",
+          "points": 29,
+          "rank": 3
+        },
+        {
+          "playerId": "thorpon66",
+          "username": "Thorpon66",
+          "points": 22,
+          "rank": 4
+        },
+        {
+          "playerId": "elnylons",
+          "username": "ElNylons",
+          "points": 20,
+          "rank": 5
+        },
+        {
+          "playerId": "rijik",
+          "username": "rijik",
+          "points": 20,
+          "rank": 6
+        },
+        {
+          "playerId": "lukskordoba",
+          "username": "lukskordoba",
+          "points": 9,
+          "rank": 7
+        },
+        {
+          "playerId": "jorgefg77",
+          "username": "JorgeFG77",
+          "points": 6,
+          "rank": 8
+        },
+        {
+          "playerId": "hasanalishah",
+          "username": "Hasanalishah",
+          "points": 4,
+          "rank": 9
+        },
+        {
+          "playerId": "t_ganzhin_mikhail",
+          "username": "T_Ganzhin_Mikhail",
+          "points": 2,
+          "rank": 10
+        },
+        {
+          "playerId": "danzino21",
+          "username": "Danzino21",
+          "points": 2,
+          "rank": 11
+        },
+        {
+          "playerId": "oldman_pleis",
+          "username": "Oldman_Pleis",
+          "points": 2,
+          "rank": 12
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 13
+        },
+        {
+          "playerId": "invalid94",
+          "username": "invalid94",
+          "points": 0,
+          "rank": 14
+        },
+        {
+          "playerId": "rayku2005",
+          "username": "RayKu2005",
+          "points": 0,
+          "rank": 15
+        },
+        {
+          "playerId": "rrirrautentico",
+          "username": "RRiRRautentico",
+          "points": 0,
+          "rank": 16
+        }
+      ]
+    },
+    {
       "id": "arena:IXGeCjy8",
       "lichessId": "IXGeCjy8",
       "type": "arena",
@@ -810284,6 +810390,40 @@
           "username": "ElNylons",
           "points": 0,
           "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "arena:fhmZ26kE",
+      "lichessId": "fhmZ26kE",
+      "type": "arena",
+      "name": "150th Lichess Mega Team Battle",
+      "startAt": "2026-10-16T16:00:00.000Z",
+      "url": "https://lichess.org/tournament/fhmZ26kE",
+      "results": [
+        {
+          "playerId": "subhra2019",
+          "username": "Subhra2019",
+          "points": 46,
+          "rank": 1
+        },
+        {
+          "playerId": "mahdimolavi",
+          "username": "mahdimolavi",
+          "points": 14,
+          "rank": 2
+        },
+        {
+          "playerId": "aizen-sama20",
+          "username": "Aizen-sama20",
+          "points": 12,
+          "rank": 3
+        },
+        {
+          "playerId": "ajedrezconzeta",
+          "username": "ajedrezconzeta",
+          "points": 0,
+          "rank": 4
         }
       ]
     }
